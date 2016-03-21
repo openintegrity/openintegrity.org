@@ -1,4 +1,4 @@
-image: iGLOO-be/docker-rvm-nvm
+image: fridus/docker-rvm-nvm
 
 cache:
   paths:
