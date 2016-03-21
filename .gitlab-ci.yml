@@ -27,11 +27,10 @@ test-links:
   - npm test-links
 
 deploy:
-  skip_cleanup: true
-  provider: script
-  script: npm run deploy
+  script: 
+  - npm run mirror
 
 variables:
-  - GH_USERNAME=jmatsushita
-  - CONFIG_OWNER=openintegrity
-  - CONFIG_REPO=openintegrity.org
+  GH_USERNAME: jmatsushita
+  CONFIG_OWNER: openintegrity
+  CONFIG_REPO: openintegrity.org
