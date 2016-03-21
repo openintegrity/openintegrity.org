@@ -18,15 +18,22 @@ before_script:
 
 jekyll-build:
   stage: build
+  tags: 
+  - docker
   script:
   - npm build
 
 test-links:
   stage: test
+  tags: 
+  - docker
   script:
-  - npm test-links
+  - npm test
 
 deploy:
+  stage: deploy
+  tags: 
+  - docker
   script: 
   - npm run mirror
 
