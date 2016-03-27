@@ -7,6 +7,7 @@ layout: default
 The Open Integrity Initiative is [rebooting](reboot).
 
 We aim to answer **reliably and consistently** questions such as: 
+
 - Which tools are open-source? 
 - Which tools provide end-to-end encryption? 
 - Which implement forward secrecy or support two-factor authentication? 
