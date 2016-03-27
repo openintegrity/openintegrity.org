@@ -1,16 +1,11 @@
 ---
-layout: default
+layout: page
+title: Blog
 ---
 
-<div class="post">
-  <span class="post-date">{{ page.date | date_to_string }}</span>
-  {{ content }}
-</div>
-
 <div class="related">
-  <h2>Related Posts</h2>
   <ul class="related-posts">
-    {% for post in site.related_posts limit:3 %}
+    {% for post in site.posts limit:3 %}
       <li>
         <h3>
           <a href="{{ site.baseurl }}{{ post.url }}">

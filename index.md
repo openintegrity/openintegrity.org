@@ -1,14 +1,33 @@
 ---
 layout: default
-title: Home
 ---
 
-## Welcome to your Content as Code website!
+## Rebooting Open Integrity
 
-**Content as Code** is an approach to develop workflows and technology to improve content re-use and maintainability.
+The Open Integrity Initiative is [rebooting](reboot).
 
-It aims to **make content authoring and management benefit from software engineering collaboration best practices**.
+We aim to answer **reliably and consistently** questions such as: 
+- Which tools are open-source? 
+- Which tools provide end-to-end encryption? 
+- Which implement forward secrecy or support two-factor authentication? 
+- Which have security features that are usable without prior expertise or training? 
+- Which can be downloaded securely and verified to be authentic? 
 
-This is an empty site created via `docsmith init`. In docsmith version 0.0.2 this initialises a content as code site with the following defaults:
- - jekyll site 
+You can read more [about the project](about).
+
+<div class="related">
+  <h3>Recent Blog Posts</h3>
+  <ul class="related-posts">
+    {% for post in site.posts limit:3 %}
+      <li>
+        <h3>
+          <a href="{{ site.baseurl }}{{ post.url }}">
+            {{ post.title }}
+            <small>{{ post.date | date_to_string }}</small>
+          </a>
+        </h3>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
 
