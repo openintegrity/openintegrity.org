@@ -64,48 +64,50 @@
     <div>
       <small>
         <div style="float:left"><a href="/openintegrity.org/">Home</a>
-                      / Index.md
+                      / <a href="/openintegrity.org/framework/howtos/impact.md/">Framework</a>
+                              / <a href="/openintegrity.org/framework/howtos/impact.md/">Howtos</a>
+                              / Impact.md
                 </div>
 
-        <div style="float:right"><em><a href="https://code.iilab.org/openintegrity/openintegrity.org/edit/master//index.md">Edit this page</a> - <a href="https://code.iilab.org/openintegrity/openintegrity.org/commits/master//index.md">View page history</a> - <a href="https://code.iilab.org/openintegrity/openintegrity.org/tree/master//index.md">View page source</a></em>
+        <div style="float:right"><em><a href="https://code.iilab.org/openintegrity/openintegrity.org/edit/master//framework/howtos/impact.md">Edit this page</a> - <a href="https://code.iilab.org/openintegrity/openintegrity.org/commits/master//framework/howtos/impact.md">View page history</a> - <a href="https://code.iilab.org/openintegrity/openintegrity.org/tree/master//framework/howtos/impact.md">View page source</a></em>
         </div>
       </small>
     </div>
 
     <div class="page" style="clear:both">
       <h1 class="page-title"></h1>
-      <h2 id="rebooting-open-integrity">Rebooting Open Integrity</h2>
-<p>The Open Integrity Initiative is <a href="2016/03/08/booting-up">booting up</a>.</p>
-<p>We aim to provide <strong>reliable, consistent and evidence based</strong> answers to questions such as:</p>
-<ul>
-<li>Which tools are open-source?</li>
-<li>Which provide end-to-end encryption?</li>
-<li>Which implement forward secrecy</li>
-<li>Which support two-factor authentication?</li>
-<li>Which can be downloaded securely and verified to be authentic?</li>
-</ul>
-<p>You can read more <a href="about">about the project</a>.</p>
-<div class="related">
-  <h3>Recent Blog Posts</h3>
-  <ul class="related-posts">
-      <li>
-        <h3>
-          <a href="/openintegrity.org/blog/2016-03-08-internet-freedom-festival">
-            Impact Workshop at the IFF in Valencia
-            <small>2016-03-08</small>
-          </a>
-        </h3>
-      </li>
-      <li>
-        <h3>
-          <a href="/openintegrity.org/blog/2016-03-01-booting-up">
-            Booting up the Open Integrity Index
-            <small>2016-03-01</small>
-          </a>
-        </h3>
-      </li>
-  </ul>
-</div>
+      <h1 id="contributor">1. Contributor</h1>
+<p>How to add and tag an incident</p>
+<ol>
+<li><a href="https://code.iilab.org/users/sign_in">Create an account on the iilab gitlab</a></li>
+<li>Confirm your email address</li>
+<li><a href="https://code.iilab.org/users/sign_in">Sign in</a></li>
+<li>Go to the <a href="https://code.iilab.org/openintegrity/framework/tree/master/1_impact/reports">reports</a> folder</li>
+<li>Click <strong>[+]</strong> and select <em>New file</em>.</li>
+<li><p>Click <em>File Name</em> and enter a filename as shown below</p>
+<pre><code>yyyy-mm-dd-&lt;description&gt;</code></pre></li>
+<li><p>Add the report <em>meta-data</em> as shown below</p>
+<pre><code>---
+reference: &lt;URL if relevant&gt;
+reference_type: &lt;report, news, primary, etc.&gt;
+source: &lt;organisational URL, primary&gt;
+source_type: &lt;academia, media, corporate, individual, etc.&gt;
+tool: &lt;tool to which the report is relevant&gt;
+community: &lt;community affected&gt;
+...</code></pre></li>
+<li><p>Select an <em>impact pattern</em> from <a href="https://code.iilab.org/openintegrity/framework/tree/master/1_impact/patterns">the list here</a> and add it to the front matter</p>
+<pre><code>...
+pattern: &lt;pattern&gt;
+---</code></pre></li>
+<li>If you are reporting an original incident, describe it anonymously in the body of the report. <strong>Be do not reveal sensitive or identifying information about the individuals involved.</strong></li>
+<li>Type a simple but descriptive <em>Commit message</em> along the lines of &quot;Added a report about <topic>&quot;</li>
+<li>Click <strong>[Commit changes]</strong>. <em>A new branch will be created in your fork and a new merge request will be started.</em></li>
+<li>Use the <em>Description</em> box to provide background or clarifying information to help us understand your report</li>
+<li><p>Click <strong>[Submit merge request]</strong></p></li>
+</ol>
+<p>Your report has been submitted. Make note of the URL, as further discussion about this report will be visible here. We will contact you by email if we need additional information.</p>
+<p><a href="https://github.com/iilab/openmentoring-content/wiki/Help-us-curate-content">Glossary of concepts</a></p>
+<h1 id="reviewer">2. Reviewer</h1>
 
     </div>
 

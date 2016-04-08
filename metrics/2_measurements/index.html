@@ -64,48 +64,66 @@
     <div>
       <small>
         <div style="float:left"><a href="/openintegrity.org/">Home</a>
-                      / Index.md
+                      / <a href="/openintegrity.org/metrics/2_measurements/index.md/">Metrics</a>
+                              / <a href="/openintegrity.org/metrics/2_measurements/index.md/">2_measurements</a>
+                              / Index.md
                 </div>
 
-        <div style="float:right"><em><a href="https://code.iilab.org/openintegrity/openintegrity.org/edit/master//index.md">Edit this page</a> - <a href="https://code.iilab.org/openintegrity/openintegrity.org/commits/master//index.md">View page history</a> - <a href="https://code.iilab.org/openintegrity/openintegrity.org/tree/master//index.md">View page source</a></em>
+        <div style="float:right"><em><a href="https://code.iilab.org/openintegrity/openintegrity.org/edit/master//metrics/2_measurements/index.md">Edit this page</a> - <a href="https://code.iilab.org/openintegrity/openintegrity.org/commits/master//metrics/2_measurements/index.md">View page history</a> - <a href="https://code.iilab.org/openintegrity/openintegrity.org/tree/master//metrics/2_measurements/index.md">View page source</a></em>
         </div>
       </small>
     </div>
 
     <div class="page" style="clear:both">
       <h1 class="page-title"></h1>
-      <h2 id="rebooting-open-integrity">Rebooting Open Integrity</h2>
-<p>The Open Integrity Initiative is <a href="2016/03/08/booting-up">booting up</a>.</p>
-<p>We aim to provide <strong>reliable, consistent and evidence based</strong> answers to questions such as:</p>
+      <h1 id="measurements">Measurements</h1>
+<p>Possible types of measurement, based on what the measurement's object is.</p>
+<p>One way to define what a measurement is would be to say &quot;what do I need to monitor in order to know about a significant change about some aspect of the project&quot;.</p>
+<h2 id="measurement-types">Measurement Types</h2>
+<h2 id="project-application">Project Application</h2>
+<blockquote>
+<p>Issue tracker, version control, package manager metadata,...</p>
+</blockquote>
+<p>Agent characteristics:</p>
 <ul>
-<li>Which tools are open-source?</li>
-<li>Which provide end-to-end encryption?</li>
-<li>Which implement forward secrecy</li>
-<li>Which support two-factor authentication?</li>
-<li>Which can be downloaded securely and verified to be authentic?</li>
+<li>API Client</li>
+<li>Parser</li>
 </ul>
-<p>You can read more <a href="about">about the project</a>.</p>
-<div class="related">
-  <h3>Recent Blog Posts</h3>
-  <ul class="related-posts">
-      <li>
-        <h3>
-          <a href="/openintegrity.org/blog/2016-03-08-internet-freedom-festival">
-            Impact Workshop at the IFF in Valencia
-            <small>2016-03-08</small>
-          </a>
-        </h3>
-      </li>
-      <li>
-        <h3>
-          <a href="/openintegrity.org/blog/2016-03-01-booting-up">
-            Booting up the Open Integrity Index
-            <small>2016-03-01</small>
-          </a>
-        </h3>
-      </li>
-  </ul>
-</div>
+<h2 id="document">Document</h2>
+<blockquote>
+<p>Web page (typically terms of service)</p>
+</blockquote>
+<p>Agent characteristics:</p>
+<ul>
+<li>Crawler</li>
+</ul>
+<h2 id="network">Network</h2>
+<blockquote>
+<p>Availability</p>
+</blockquote>
+<p>Agent characteristics:</p>
+<ul>
+<li>Probe</li>
+</ul>
+<h2 id="application">Application</h2>
+<blockquote>
+<p>Running application (fuzzing), internet end points for the project, design,...</p>
+</blockquote>
+<p>Agent characteristics:</p>
+<ul>
+<li>Headless Browser</li>
+<li>Bots</li>
+<li>Sandbox</li>
+<li>Fuzzing tool</li>
+</ul>
+<h2 id="code">Code</h2>
+<blockquote>
+<p>Actual source code.</p>
+</blockquote>
+<p>Agent characteristics:</p>
+<ul>
+<li>Version Control Client</li>
+</ul>
 
     </div>
 
