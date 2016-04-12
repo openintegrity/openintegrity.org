@@ -1,0 +1,11 @@
+/*******************************
+    User Variable Overrides
+*******************************/
+
+.ui.small.feed > .event > .content .extra.text {
+  padding: @extraTextPadding;
+  border-left: @extraTextPointer;
+  font-size: @extraTextFontSize;
+  max-width: @extraTextMaxWidth;
+  line-height: @extraTextLineHeight;
+}

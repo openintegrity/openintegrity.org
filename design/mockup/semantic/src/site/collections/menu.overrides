@@ -1,0 +1,7 @@
+/*******************************
+         Site Overrides
+*******************************/
+
+.ui.menu .item > .ui.button {
+    margin-left: 0.5em;
+}

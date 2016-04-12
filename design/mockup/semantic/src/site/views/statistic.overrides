@@ -1,0 +1,7 @@
+/*******************************
+    User Variable Overrides
+*******************************/
+
+.ui.horizontal.statistics .statistic:last-child {
+  margin-bottom: 0.5em;
+}

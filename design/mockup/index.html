@@ -1,0 +1,208 @@
+
+<html>
+  <head>
+    <!-- Standard Meta-->
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+    <!-- Site Properties-->
+    <title>Mockup - Open Integrity</title>
+    <link rel="stylesheet" type="text/css" href="semantic/dist/components/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="semantic/dist/components/site.css"/>
+    <link rel="stylesheet" type="text/css" href="semantic/dist/components/container.css"/>
+    <link rel="stylesheet" type="text/css" href="semantic/dist/components/grid.css"/>
+    <link rel="stylesheet" type="text/css" href="semantic/dist/components/header.css"/>
+    <link rel="stylesheet" type="text/css" href="semantic/dist/components/image.css"/>
+    <link rel="stylesheet" type="text/css" href="semantic/dist/components/menu.css"/>
+    <link rel="stylesheet" type="text/css" href="semantic/dist/components/divider.css"/>
+    <link rel="stylesheet" type="text/css" href="semantic/dist/components/dropdown.css"/>
+    <link rel="stylesheet" type="text/css" href="semantic/dist/components/segment.css"/>
+    <link rel="stylesheet" type="text/css" href="semantic/dist/components/button.css"/>
+    <link rel="stylesheet" type="text/css" href="semantic/dist/components/list.css"/>
+    <link rel="stylesheet" type="text/css" href="semantic/dist/components/icon.css"/>
+    <link rel="stylesheet" type="text/css" href="semantic/dist/components/sidebar.css"/>
+    <link rel="stylesheet" type="text/css" href="semantic/dist/components/transition.css"/>
+    <link rel="stylesheet" type="text/css" href="semantic/dist/components/statistic.css"/>
+    <link rel="stylesheet" type="text/css" href="semantic/dist/components/feed.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/site.css"/>
+    <script src="assets/library/jquery.min.js"></script>
+    <script src="semantic/dist/components/visibility.js"></script>
+    <script src="semantic/dist/components/sidebar.js"></script>
+    <script src="semantic/dist/components/transition.js"></script>
+    <script>
+      $(document)
+      .ready(function() {
+      // fix menu when passed
+      $('.masthead')
+      .visibility({
+      once: false,
+      onBottomPassed: function() {
+      $('.fixed.menu').transition('fade in');
+      },
+      onBottomPassedReverse: function() {
+      $('.fixed.menu').transition('fade out');
+      }
+      })
+      ;
+      // create sidebar and attach to menu open
+      $('.ui.sidebar')
+      .sidebar('attach events', '.toc.item')
+      ;
+      })
+      ;
+    </script>
+  </head>
+  <body class="pushable">
+    <!-- Following Menu-->
+    <div class="ui large top fixed secondary pointing hidden menu">
+      <div class="ui container"><a class="active item">Home</a><a class="item">Tools</a><a class="item">Topics</a><a class="item">Scores</a><a class="item">About</a>
+        <div class="right item"><a class="ui button">Log in</a><a class="ui button">Sign Up</a></div>
+      </div>
+    </div>
+    <!-- Sidebar Menu-->
+    <div class="ui vertical inverted sidebar menu left"><a class="active item">Home</a><a class="item">Tools</a><a class="item">Topics</a><a class="item">Scores</a><a class="item">About</a><a class="item">Login</a><a class="item">Signup</a></div>
+    <!-- Page Contents-->
+    <div class="pusher">
+      <div class="ui vertical masthead center aligned basic segment">
+        <div class="ui container">
+          <div class="ui large secondary pointing menu"><a class="toc item"><i class="sidebar icon"></i></a><a class="active item">Home</a><a class="item">Tools</a><a class="item">Topics</a><a class="item">Scores</a><a class="item">About</a>
+            <div class="right item"><a class="ui button">Log in</a><a class="ui button">Sign Up</a></div>
+          </div>
+        </div>
+        <div class="ui text container">
+          <h1 class="ui header">Open Integrity</h1>
+          <h2>Metrics for Tool Security and Privacy</h2>
+          <div class="ui hidden divider"></div>
+          <div class="ui huge primary button">Get Started <i class="right arrow icon"></i></div>
+        </div>
+      </div>
+      <div class="ui vertical basic segment">
+        <div class="ui equal width stackable internally celled grid">
+          <div class="center aligned row">
+            <div class="column">
+              <div class="ui horizontal statistics">
+                <div class="statistic">
+                  <div class="value">5</div>
+                  <div class="label">Tools</div>
+                </div>
+                <div class="statistic">
+                  <div class="value">6</div>
+                  <div class="label">Sources</div>
+                </div>
+                <div class="statistic">
+                  <div class="value">60</div>
+                  <div class="label">Metrics</div>
+                </div>
+                <div class="statistic last">
+                  <div class="value">1</div>
+                  <div class="label">Consumers</div>
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <h3 class="ui sub header">Coverage / Freshness</h3>
+              <div id="sparkline"></div>
+            </div>
+            <div class="column">
+              <div class="ui small feed">
+                <div class="event">
+                  <div class="label"><i class="mini calendar icon"></i></div>
+                  <div class="content">
+                    <div class="summary"><a class="user">Elliot Fu</a> added you as a friend
+                      <div class="date">1 Hour Ago</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="event">
+                  <div class="label"><i class="mini pencil icon"></i></div>
+                  <div class="content">
+                    <div class="summary">You submitted a new post to the page
+                      <div class="date">3 days ago</div>
+                    </div>
+                    <div class="extra text">I'm having a BBQ this weekend. Come by around 4pm if you can.</div>
+                  </div>
+                </div>
+                <div class="event">
+                  <div class="label"><i class="mini pencil icon"></i></div>
+                  <div class="content">
+                    <div class="date">4 days ago</div>
+                    <div class="summary"><a>Helen Troy</a> added <a>2 new illustrations</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ui vertical stripe segment">
+        <div class="ui text container">
+          <h3 class="ui header">Breaking The Grid, Grabs Your Attention</h3>
+          <p>Instead of focusing on content creation and hard work, we have learned how to master the art of doing nothing by providing massive amounts of whitespace and generic content that can seem massive, monolithic and worth your attention.</p><a class="ui large button">Read More</a>
+          <h4 class="ui horizontal header divider"><a href="#">Case Studies</a></h4>
+          <h3 class="ui header">Did We Tell You About Our Bananas?</h3>
+          <p>Yes I know you probably disregarded the earlier boasts as non-sequitor filler content, but its really true. It took years of gene splicing and combinatory DNA research, but our bananas can really dance.</p><a class="ui large button">I'm Still Quite Interested</a>
+        </div>
+      </div>
+      <div class="ui inverted vertical footer segment">
+        <div class="ui container">
+          <div class="ui stackable inverted divided equal height stackable grid">
+            <div class="three wide column">
+              <h4 class="ui inverted header">About</h4>
+              <div class="ui inverted link list"><a href="#" class="item">Sitemap</a><a href="#" class="item">Contact Us</a><a href="#" class="item">Religious Ceremonies</a><a href="#" class="item">Gazebo Plans</a></div>
+            </div>
+            <div class="three wide column">
+              <h4 class="ui inverted header">Services</h4>
+              <div class="ui inverted link list"><a href="#" class="item">Banana Pre-Order</a><a href="#" class="item">DNA FAQ</a><a href="#" class="item">How To Access</a><a href="#" class="item">Favorite X-Men</a></div>
+            </div>
+            <div class="seven wide column">
+              <h4 class="ui inverted header">Footer Header</h4>
+              <p>Extra space for a call to action inside the footer that could help re-engage users.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="assets/library/jquery.sparkline.min.js"></script>
+  <script>
+    $(function() {
+      var coverage = [ 0, 0, 0, 2, 3, 6, 14];
+      var sparkline = function() {
+        $('#sparkline').sparkline(
+          coverage,
+          {
+              type: 'line',
+              width: '100%',
+              height: '150',
+              chartRangeMin: '0',
+              chartRangeMax: '20',
+              lineColor:'blue',
+              fillColor: false,
+              tooltipPrefix: 'Coverage: '
+          });
+    
+      var freshness = [ 0, 0, 0, 0, 1, 2, 4];
+        $('#sparkline').sparkline(
+          freshness,
+          {
+              composite: true,
+              type: 'line',
+              chartRangeMin: '0',
+              chartRangeMax: '20',
+              lineColor:'black',
+              fillColor: '#f9f9fe',
+              tooltipPrefix: 'Freshness: '        
+          });
+      }
+    
+      var sparkResize;
+     
+      $(window).resize(function(e) {
+        clearTimeout(sparkResize);
+        sparkResize = setTimeout(sparkline, 500);
+      });
+    
+      sparkline();
+    });
+  </script>
+</html>
