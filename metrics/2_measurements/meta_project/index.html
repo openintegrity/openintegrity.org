@@ -7,55 +7,7 @@
 <p>There are binary artifacts that in fact contain several projects. There are projects that are in fact dependent on other binaries running elsewhere (server, or peers). A project is the high level thing. This is hard but we start simply with our 5 and go in more detail as we need. Is it going to enlarge the metric space if we add details? See <a href="../architecture/scale">thoughts about scale</a>.</p>
 </blockquote>
 <p>:<a href="/schema/measurement/meta/project/id"></a></p>
-<h3 id="project-name">Project name</h3>
-<blockquote>
-<p>This should probably be composed of an official name, as well as aliases or other commonly used names.</p>
-</blockquote>
-<p>:<a href="/schema/measurement/meta/project/name"></a></p>
-<h3 id="project-owner">Project owner</h3>
-<blockquote>
-<p>This can be an organisation, a group or individual. Owner identifier (opencorporate id | group | individual ). Not impossible that there would be multiple owners.</p>
-</blockquote>
-<p>:<a href="/schema/measurement/meta/project/owner"></a></p>
-<h3 id="project-website">Project website</h3>
-<blockquote>
-<p>There are probably sites in many languages.</p>
-</blockquote>
-<p>:<a href="/schema/measurement/meta/project/website"></a></p>
-<h3 id="project-documentation">Project Documentation <a href="%22Not%20in%20the%20original%20metrics%20sheet%22">?</a></h3>
-<blockquote>
-<p>Possibly many types (User documentation or manual, administrators' manual, technical documentation, architecture documentation, protocol or schema documentation, api documentation...)</p>
-</blockquote>
-<p>:<a href="/schema/measurement/meta/project/documentation"></a></p>
-<h3 id="project-code-repositories">Project code repositories</h3>
-<blockquote>
-<p>Project would be generally composed of multiple repository. Either because they're made of multiple components, or because they have variations based on platforms, or other factors (community version, censored version,...). Not easy to differentiate a component from a library... But probably from an OII standpoint it doesn't matter (i.e. it's just a label). Some components are reusable across platforms.</p>
-</blockquote>
-<blockquote>
-<p>Components (i.e. what if its clear that it has a closed source server side component? Use Placeholders until evidence helps determine actual component structure).</p>
-</blockquote>
-<p>:<a href="/schema/measurement/meta/project/repositories"></a></p>
-<h3 id="project-download-link-service-end-point">Project download link / service end-point</h3>
-<p>:<a href="/schema/measurement/meta/project/download"></a></p>
-<h3 id="project-issue-tracker">Project issue tracker</h3>
-<p>:<a href="/schema/measurement/meta/project/issues"></a></p>
-<h3 id="project-current-release-version">Project current release version</h3>
-<p>:<a href="/schema/measurement/meta/project/releases/latest"></a></p>
-<h3 id="project-dependencies">Project Dependencies</h3>
-<blockquote>
-<p>This might require a graph data structure. This is important but can have significant <a href="../architecture/scale.md">scale sensitivity</a> consequences. In the big picture dependencies need to be typed (code, runtime, remote, os, device, protocols,...). Code is a low hanging fruit for open source. OS, Device can be simple properties for now.</p>
-</blockquote>
-<h2 id="platforms">Platforms</h2>
-<blockquote>
-<p>Do we need all compilation targets?? For now start with top level platforms, go more detailed when needed.</p>
-</blockquote>
-<ul>
-<li>Windows</li>
-<li>OSX</li>
-<li>Linux</li>
-<li>Android</li>
-<li>iOS</li>
-</ul>
+<p>ERROR: Could not read file (/schema/measurement/meta/project/id)</p>
 </div></body><hr><div class="section get-help"><div class="container"><h3 class="section-heading">Want to join the initiative?</h3><p class="section-description">Open Integrity needs your help to provide the best and most up to date information. Get in touch to join the initiative !</p><a href="mailto://contact@openintegrity.org" class="button button-primary">Get in touch</a></div></div><div class="section categories"><div class="container"><div class="row"><div class="two columns">&nbsp;</div><div class="eight column category"><h4>Developed with ❤ by</h4><a href="https://iilab.org"><img src="/openintegrity.org/images/iilab_white.svg" class="u-max-full-width"></a><h5>Information Innovation Lab</h5><p>Applied research and development of public interest technology.</p></div><div class="two columns">&nbsp;</div></div></div></div><script>var js = document.createElement('script')
 js.src = '//' + (location.host || 'localhost').split(':')[0] + ':3000/browser-sync/browser-sync-client.js'
 document.body.appendChild(js)
