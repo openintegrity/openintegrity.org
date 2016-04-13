@@ -76,62 +76,70 @@
           <div class="ui huge primary button">Get Started <i class="right arrow icon"></i></div>
         </div>
       </div>
-      <div class="ui vertical basic segment">
-        <div class="ui equal width stackable internally celled grid">
-          <div class="center aligned row">
-            <div class="column">
-              <div class="ui horizontal statistics">
-                <div class="statistic">
-                  <div class="value">5</div>
-                  <div class="label">Tools</div>
-                </div>
-                <div class="statistic">
-                  <div class="value">6</div>
-                  <div class="label">Sources</div>
-                </div>
-                <div class="statistic">
-                  <div class="value">60</div>
-                  <div class="label">Metrics</div>
-                </div>
-                <div class="statistic last">
-                  <div class="value">1</div>
-                  <div class="label">Consumers</div>
+      <div class="ui vertical center aligned basic segment">
+        <div class="ui five columns centered stackable grid">
+          <div class="column"></div>
+          <div class="column centered aligned">
+            <div id="sparkline"></div>
+            <h3 class="ui sub header">Coverage / Freshness</h3>
+          </div>
+          <div class="column">
+            <div class="column centered aligned">
+              <div class="segment">
+                <div class="ui statistics">
+                  <div class="statistic last">
+                    <div class="value">5</div>
+                    <div class="label">Tools</div>
+                  </div>
+                  <div class="statistic last">
+                    <div class="value">6</div>
+                    <div class="label">Sources</div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="column">
-              <h3 class="ui sub header">Coverage / Freshness</h3>
-              <div id="sparkline"></div>
-            </div>
-            <div class="column">
-              <div class="ui small feed">
-                <div class="event">
-                  <div class="label"><i class="mini calendar icon"></i></div>
-                  <div class="content">
-                    <div class="summary"><a class="user">Elliot Fu</a> added you as a friend
-                      <div class="date">1 Hour Ago</div>
-                    </div>
+            <div class="column centered aligned">
+              <div class="segment">
+                <div class="ui statistics">
+                  <div class="statistic last">
+                    <div class="value">60</div>
+                    <div class="label">Metrics</div>
                   </div>
-                </div>
-                <div class="event">
-                  <div class="label"><i class="mini pencil icon"></i></div>
-                  <div class="content">
-                    <div class="summary">You submitted a new post to the page
-                      <div class="date">3 days ago</div>
-                    </div>
-                    <div class="extra text">I'm having a BBQ this weekend. Come by around 4pm if you can.</div>
-                  </div>
-                </div>
-                <div class="event">
-                  <div class="label"><i class="mini pencil icon"></i></div>
-                  <div class="content">
-                    <div class="date">4 days ago</div>
-                    <div class="summary"><a>Helen Troy</a> added <a>2 new illustrations</a></div>
+                  <div class="statistic last">
+                    <div class="value">1</div>
+                    <div class="label">Consumers</div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+          <div class="column centered aligned">
+            <div class="ui small feed">
+              <div class="event">
+                <div class="label"><i class="mini pencil icon"></i></div>
+                <div class="content">
+                  <div class="date">1 Hour Ago</div>
+                  <div class="summary"><a class="user">Elliot Fu</a> added a new tool</div>
+                </div>
+              </div>
+              <div class="event">
+                <div class="label"><i class="mini calendar icon"></i></div>
+                <div class="content">
+                  <div class="date">3 days ago</div>
+                  <div class="summary"><a class="metric">Skype Terms of Services </a>outdated</div>
+                  <div class="extra text"><a href="http://example.com">Help us review the new page!</a></div>
+                </div>
+              </div>
+              <div class="event">
+                <div class="label"><i class="mini pencil icon"></i></div>
+                <div class="content">
+                  <div class="date">4 days ago</div>
+                  <div class="summary"><a>Coverage updated</a> added <a>14 out of 60 metrics covered </a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="column"></div>
         </div>
       </div>
       <div class="ui vertical stripe segment">
@@ -172,7 +180,7 @@
           coverage,
           {
               type: 'line',
-              width: '100%',
+              width: '250px',
               height: '150',
               chartRangeMin: '0',
               chartRangeMax: '20',

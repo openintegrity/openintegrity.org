@@ -14,66 +14,61 @@ html
           .ui.huge.primary.button
             | Get Started 
             i.right.arrow.icon
-      .ui.vertical.basic.segment
-        .ui.equal.width.stackable.internally.celled.grid
-          .center.aligned.row
-            .column
-              .ui.horizontal.statistics
-                .statistic
-                  .value
-                    | 5
-                  .label
-                    | Tools
-                .statistic
-                  .value
-                    | 6
-                  .label
-                    | Sources
-                .statistic
-                  .value
-                    | 60
-                  .label
-                    | Metrics
-                .statistic.last
-                  .value
-                    | 1
-                  .label
-                    | Consumers
-            .column
-              h3.ui.sub.header Coverage / Freshness
-              #sparkline
-            .column
-              .ui.small.feed
-                .event
-                  .label
-                    i.mini.calendar.icon
-                  .content
-                    .summary
-                      a.user
-                        | Elliot Fu
-                      |  added you as a friend
-                      .date
-                        | 1 Hour Ago
-                .event
-                  .label
-                    i.mini.pencil.icon
-                  .content
-                    .summary
-                      | You submitted a new post to the page
-                      .date
-                        | 3 days ago
-                    .extra.text
-                      | I'm having a BBQ this weekend. Come by around 4pm if you can.
-                .event
-                  .label
-                    i.mini.pencil.icon
-                  .content
-                    .date
-                      | 4 days ago
-                    .summary
-                      a Helen Troy
-                      |  added 
-                      a 2 new illustrations
+      .ui.vertical.center.aligned.basic.segment
+        .ui.five.columns.centered.stackable.grid
+          .column
+          .column.centered.aligned
+            #sparkline
+            h3.ui.sub.header Coverage / Freshness
+          .column
+            .column.centered.aligned
+              .segment
+                .ui.statistics
+                  .statistic.last
+                    .value 5
+                    .label Tools
+                  .statistic.last
+                    .value 6
+                    .label Sources
+            .column.centered.aligned
+              .segment
+                .ui.statistics
+                  .statistic.last
+                    .value 60
+                    .label Metrics
+                  .statistic.last
+                    .value 1
+                    .label Consumers
+          .column.centered.aligned
+            .ui.small.feed
+              .event
+                .label
+                  i.mini.pencil.icon
+                .content
+                  .date 1 Hour Ago
+                  .summary
+                    a.user Elliot Fu
+                    |  added a new tool
+              .event
+                .label
+                  i.mini.calendar.icon
+                .content
+                  .date 3 days ago
+                  .summary
+                    a.metric Skype Terms of Services 
+                    | outdated
+                  .extra.text
+                    a(href='http://example.com') Help us review the new page!
+              .event
+                .label
+                  i.mini.pencil.icon
+                .content
+                  .date 4 days ago
+                  .summary
+                    a Coverage updated
+                    |  added 
+                    a 14 out of 60 metrics covered 
+          .column
       .ui.vertical.stripe.segment
         .ui.text.container
           h3.ui.header Breaking The Grid, Grabs Your Attention
