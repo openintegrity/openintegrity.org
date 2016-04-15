@@ -1,0 +1,137 @@
+<!DOCTYPE html><!--if lt IE 7<html class="ie ie6" lang="en">--><!--if IE 7<html class="ie ie7" lang="en">--><!--if IE 8<html class="ie ie8" lang="en">--><!--if (gte IE 9)|!(IE)<!--><html lang="en"> <!--
+--><html><head><meta charset="utf8"><title> &middot; Open Integrity</title><meta name="description" content=""><meta name="author" content=""><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><link rel="stylesheet" href="/openintegrity.org/css/skeleton.css"><link rel="stylesheet" href="/openintegrity.org/css/site.css"><!--if lt IE 9script(src="http://html5shim.googlecode.com/svn/trunk/html5.js")
+--><script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script><script src="/openintegrity.org/js/site.js"></script><link rel="shortcut icon" href="/openintegrity.org/images/favicon.ico"><link rel="apple-touch-icon" href="/openintegrity.org/images/apple-touch-icon.png"><link rel="apple-touch-icon" sizes="72x72" href="/openintegrity.org/images/apple-touch-icon-72x72.png"><link rel="apple-touch-icon" sizes="114x114" href="/openintegrity.org/images/apple-touch-icon-114x114.png"><link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css"><link rel="alternate" type="application/rss+xml" title="RSS" href="{{ site.baseurl }}/atom.xml"></head><body class="has-docked-nav"><div class="container"><div class="navbar-spacer"></div><nav class="navbar"><div class="container"><ul class="navbar-list"><li class="navbar-item"><a href="/openintegrity.org" class="navbar-link">Home</a></li><li class="navbar-item"><a href="#" data-popover="#codeNavAbout" class="navbar-link">About</a><div id="codeNavAbout" class="popover"><ul class="popover-list"><li class="popover-item"><a href="/openintegrity.org/about" class="popover-link">Overview</a></li><li class="popover-item"><a href="/openintegrity.org/about#team" class="popover-link">Team</a></li><li class="popover-item"><a href="/openintegrity.org/about#partners" class="popover-link">Partners</a></li><li class="popover-item"><a href="/openintegrity.org/about#board" class="popover-link">Advisory Board</a></li></ul></div></li><li class="navbar-item"><a href="#" data-popover="#codeNavPopover" class="navbar-link">Approach</a><div id="codeNavPopover" class="popover"><ul class="popover-list"><li class="popover-item"><a href="/openintegrity.org/framework" class="popover-link">Overview</a></li><li class="popover-item"><a href="/openintegrity.org/impact" class="popover-link">Impact</a></li><li class="popover-item"><a href="/openintegrity.org/practices" class="popover-link">Practices</a></li><li class="popover-item"><a href="#" class="popover-link">Metrics (soon)</a></li><li class="popover-item"><a href="#" class="popover-link">Scores (soon)</a></li></ul></div></li><li class="navbar-item"><a href="/openintegrity.org/blog" class="navbar-link">Blog</a></li><li class="navbar-item"><a href="/openintegrity.org/join" class="navbar-link">Join</a></li></ul></div></nav><div class="row links"><small><div class="crumb u-pull-left"><a href="/openintegrity.org">Home</a> / <a href="/openintegrity.org/framework/">Framework</a>  / Workflow</div><div class="utilities u-pull-right"><a href="https://code.iilab.org/openintegrity/framework/edit/master/workflow/index.md">Edit</a> - <a href="https://code.iilab.org/openintegrity/framework/commits/master/workflow/index.md">Changes</a> - <a href="https://code.iilab.org/openintegrity/framework/tree/master/workflow/index.md">Source</a></div></small></div><h1 id="workflows">Workflows</h1>
+<!-- MarkdownTOC -->
+<ul>
+<li><a href="#use-cases">Use cases</a>
+<ul>
+<li><a href="#community-of-practice-participants">Community of Practice participants</a></li>
+<li><a href="#interested-person">Interested Person</a></li>
+<li><a href="#metric-lifecycle">Metric lifecycle</a></li>
+<li><a href="#source-lifecycle">Source lifecycle</a></li>
+</ul></li>
+<li><a href="#user-stories">User Stories</a>
+<ul>
+<li><a href="#approach">Approach</a></li>
+</ul></li>
+<li><a href="#implementation">Implementation</a>
+<ul>
+<li><a href="#platform">Platform</a></li>
+</ul></li>
+</ul>
+<!-- /MarkdownTOC -->
+<p>Collaboration workflows target these categories of users:</p>
+<ul>
+<li>Impact reporters</li>
+<li>Practice debaters</li>
+<li>Metrics developers</li>
+<li>Data contributors or reviewers</li>
+</ul>
+<p>Trying to reuse existing collaboration infrastructure capabilities on Gitlab in order to minimise the development of workflow software or use of dedicated software.</p>
+<h1 id="use-cases">Use cases</h1>
+<h2 id="community-of-practice-participants">Community of Practice participants</h2>
+<blockquote>
+<p>Eg. Second Muse</p>
+<ul>
+<li>Aims are to explore the issues and understand at a glance what are the type of conversations taking place, what needs attention, and things that might be worth following or engaging on.</li>
+</ul>
+</blockquote>
+<ul>
+<li>OII Team shares a link to the larger community of practice &quot;category&quot; entry point /practices/design/ ?)</li>
+<li>The page explains the shared key principles of the Framework ( <code>: [](/framework/index.short)</code>) and of the Community of Practice approach <code>: [](/practices/index.short</code> and goes into more details of the interaction between this particular community of practice (what does &quot;Design&quot; mean here) and Open Integrity (why is design important to user security and privacy)</li>
+<li>The call to action should be ordered from the most general need to the most specific (where as on the webapp it should probably be reversed)
+<ul>
+<li>Help organise the Design Practice ongoing consultation</li>
+<li>Participate in conversations about
+<ul>
+<li>User Experience Best Practice for Security and Privacy
+<ul>
+<li>Surface info about:
+<ul>
+<li>Current thread tagged for &quot;review?&quot;</li>
+<li>Participation metrics? (Could be from the RightsCon session)</li>
+<li>A current theme?</li>
+</ul></li>
+</ul></li>
+<li>Translation and Localisation Best Practices for Security and Privacy</li>
+<li>Visual Language and Iconography Best Practices for Security and Privacy</li>
+</ul></li>
+</ul></li>
+<li>After clicking on the &quot;User Experience&quot; Community of Practice link, the user should see a page that's grabbing data from the issue tracker that could be a cross between a Discourse Topic page, a Github Issue list and a Wiki (Also see <a href="http://noahraford.com/?p=695">How to Build a Collective Intelligence Platform to Crowdsource Almost Anything</a>):
+<ul>
+<li></li>
+</ul></li>
+</ul>
+<h2 id="interested-person">Interested Person</h2>
+<blockquote>
+<p>E.g. Board member candidate, potential reviewer, funder,...</p>
+</blockquote>
+<p>Could see a Kanban view of the main components of the project with swimlanes as gitlab milestones (used as a layers because of the ongoing nature of the project)?</p>
+<h2 id="metric-lifecycle">Metric lifecycle</h2>
+<blockquote>
+<p>From the idea to the data collection and publication</p>
+</blockquote>
+<h2 id="source-lifecycle">Source lifecycle</h2>
+<blockquote>
+<p>From the suggestion to the collection and publication</p>
+</blockquote>
+<h1 id="user-stories">User Stories</h1>
+<blockquote>
+<p>Should be a transcluded view of gitlab issues <code>: [](=issues tag:&quot;stories&quot;)</code></p>
+</blockquote>
+<p>As a researcher in the Impact Group I can add and tag my desk research on known incidents with a particular tool or within a particular community</p>
+<p>As a member of the Impact Group who works closely with at-risk users, I have a place to record and tag anonymized digital security incidents and vulnerabilities as I learn about them, even if I do not have all of the details</p>
+<p>As a security techie in the Impact Group, I can add technical clarification and link to related research after learning of a new incident or vulnerability that has been added to the platform but that lacks details</p>
+<p>As a member of the Impact Group, I can link to and tag articles and reports that I think might be relevant to existing incidents or vulnerabilities on OII</p>
+<p>As a member of the Impact Group, I can easily learn of new additions to the platform that are relevant to my expertise or to the communities with which I work</p>
+<!--
+
+## Approach
+
+ - Iterate. It should be easy to draft content including folder structure, with loosely linked, sparse files.
+ - Release early and often. There should be minimal barriers to releasing work in progress. 
+ - Clear labeling. It should be easy for writers and readers to differentiate draft work from more mature work. A la commitizen/conventional-changelog.
+ - Small repos. As in code, try to separate concerns of content repos.
+
+> Problems to be mindful of:
+>  - Divergence: lots of sparse, unconnected files. -> TOC/TOC Crosslinks
+>  - Calcification: structures don't evolve because of the cost of refactoring repos/folder/files.
+>  - 
+
+# Implementation
+
+ - Draft/Published
+ - Draft/Ready for Review/In Review/Reviewed/...
+ - .../RTBC?
+
+ - Are there private spaces for elaborating details with partners for instance?
+
+ - Anonymous access / contributions
+     + There doesn't seem to be the possibility to allow anonymous submission of issues. 
+     + It might also be very susceptible to spam if it exists. So maybe creating a shared Guest account (guest/guest) would work. 
+     + The password could be changed when there is too much abuse... 
+     + Information should be provided about the Guest account (such as what's happening with the log data and other consultation metrics) 
+
+## Platform
+
+Evaluation of assembl vs a content as code approach.
+
+Key features:
+ - For free (versioning, branches, pull requests)
+ - Discussion (via code review / github's ?)
+ - Harvesting/Synthesis
+ - Traceability (via some form of validated semantic linking)
+
+Nice to have
+ - Personal annotations.
+
+Managing comments in a code review tool:
+ - pros: separation of concerns.
+ - cons: comments are not in the markdown (so can't be checked out).
+ - mitigation: output commented version (generate diffs, tooltips and medium style side comments). Roundtripping that would be hard (i.e. adding comments by committing changes to the markdown versions) but probably doable. We're back to using Markdown as a persistence format.
+
+-->
+</div></body><hr><div class="section get-help"><div class="container"><h3 class="section-heading">Want to join the initiative?</h3><p class="section-description">Open Integrity needs your help to provide the best and most up to date information. Get in touch to join the initiative !</p><a href="mailto://contact@openintegrity.org" class="button button-primary">Get in touch</a></div></div><div class="section categories"><div class="container"><div class="row"><div class="two columns">&nbsp;</div><div class="eight column category"><h4>Developed with ❤ by</h4><a href="https://iilab.org"><img src="/openintegrity.org/images/iilab_white.svg" class="u-max-full-width"></a><h5>Information Innovation Lab</h5><p>Applied research and development of public interest technology.</p></div><div class="two columns">&nbsp;</div></div></div></div><script>var js = document.createElement('script')
+js.src = '//' + (location.host || 'localhost').split(':')[0] + ':3000/browser-sync/browser-sync-client.js'
+document.body.appendChild(js)
+</script></html>
