@@ -5,7 +5,8 @@
 <ul>
 <li><a href="#use-cases">Use cases</a>
 <ul>
-<li><a href="#community-of-practice-participants">Community of Practice participants</a>
+<li><a href="#framework-taking-stock-of-the-evolution-of-the-threat-landscape">Framework: Taking stock of the evolution of the Threat Landscape</a></li>
+<li><a href="#framework-community-of-practice-participants">Framework: Community of Practice participants</a>
 <ul>
 <li><a href="#practice-lifecycle">Practice lifecycle</a></li>
 </ul></li>
@@ -32,7 +33,29 @@
 </ul>
 <p>Trying to reuse existing collaboration infrastructure capabilities on Gitlab in order to minimise the development of workflow software or use of dedicated software.</p>
 <h1 id="use-cases">Use cases</h1>
-<h2 id="community-of-practice-participants">Community of Practice participants</h2>
+<h2 id="framework-taking-stock-of-the-evolution-of-the-threat-landscape">Framework: Taking stock of the evolution of the Threat Landscape</h2>
+<p><strong>Framework User: From Impact story to Measurement Data</strong></p>
+<p>Impact</p>
+<ul>
+<li>User submits new story about Iran 2FA hacking -&gt; Impact (partner) <a href="https://code.iilab.org/openintegrity/framework/issues/1">#1</a> <a href="https://code.iilab.org/openintegrity/framework/issues/2">#2</a> <a href="https://code.iilab.org/openintegrity/framework/issues/4">#4</a></li>
+<li>Relevant Impact Group users get notified <a href="https://code.iilab.org/openintegrity/framework/issues/5">#5</a></li>
+<li>Verification -&gt; Impact (review) <a href="https://code.iilab.org/openintegrity/framework/issues/3">#3</a></li>
+<li>New attack pattern -&gt; Impact (analysis) <a href="https://code.iilab.org/openintegrity/framework/issues/3">#3</a> <a href="https://code.iilab.org/openintegrity/framework/issues/6">#6</a></li>
+</ul>
+<p>Practice</p>
+<ul>
+<li>Browsing of relevant issues that need attention <a href="https://code.iilab.org/openintegrity/framework/issues/7">#7</a></li>
+<li>Notification of Communities of Practice <a href="https://code.iilab.org/openintegrity/framework/issues/8">#8</a></li>
+<li>Debate Mitigation techniques (across multiple expertises) -&gt; Practice (discuss) <a href="https://code.iilab.org/openintegrity/framework/issues/7">#7</a></li>
+<li>Consensus on Best Practices -&gt; Practice (decision) <a href="https://code.iilab.org/openintegrity/framework/issues/8">#8</a></li>
+</ul>
+<p>Metrics</p>
+<ul>
+<li>Discussion on metrics for Best Practice -&gt; Metrics</li>
+<li>Discussion of potential measurement approaches -&gt; Metrics (measurement)</li>
+<li>Development of collection methodologies or collection agent proof-of-concepts -&gt; Metrics (collection) <a href="https://code.iilab.org/openintegrity/framework/issues/8">#10</a></li>
+</ul>
+<h2 id="framework-community-of-practice-participants">Framework: Community of Practice participants</h2>
 <blockquote>
 <p>Eg. Second Muse</p>
 <ul>
@@ -77,29 +100,33 @@
 </ul></li>
 <li>There should be some rules for when Practices are moving to the next step.</li>
 </ul>
-<h2 id="interested-person">Interested Person</h2>
-<blockquote>
-<p>E.g. Board member candidate, potential reviewer, funder,...</p>
-</blockquote>
-<p>Could see a Kanban view of the main components of the project with swimlanes as gitlab milestones (used as a layers because of the ongoing nature of the project)?</p>
-<h2 id="metric-lifecycle">Metric lifecycle</h2>
-<blockquote>
-<p>From the idea to the data collection and publication</p>
-</blockquote>
-<h2 id="source-lifecycle">Source lifecycle</h2>
-<blockquote>
-<p>From the suggestion to the collection and publication</p>
-</blockquote>
-<h1 id="user-stories">User Stories</h1>
-<blockquote>
-<p>Should be a transcluded view of gitlab issues <code>: [](=issues tag:&quot;stories&quot;)</code></p>
-</blockquote>
-<p>As a researcher in the Impact Group I can add and tag my desk research on known incidents with a particular tool or within a particular community</p>
-<p>As a member of the Impact Group who works closely with at-risk users, I have a place to record and tag anonymized digital security incidents and vulnerabilities as I learn about them, even if I do not have all of the details</p>
-<p>As a security techie in the Impact Group, I can add technical clarification and link to related research after learning of a new incident or vulnerability that has been added to the platform but that lacks details</p>
-<p>As a member of the Impact Group, I can link to and tag articles and reports that I think might be relevant to existing incidents or vulnerabilities on OII</p>
-<p>As a member of the Impact Group, I can easily learn of new additions to the platform that are relevant to my expertise or to the communities with which I work</p>
 <!--
+
+## Interested Person
+> E.g. Board member candidate, potential reviewer, funder,...
+
+Could see a Kanban view of the main components of the project with swimlanes as gitlab milestones (used as a layers because of the ongoing nature of the project)?
+
+## Metric lifecycle
+> From the idea to the data collection and publication 
+
+
+## Source lifecycle
+> From the suggestion to the collection and publication
+
+# User Stories
+
+> Should be a transcluded view of gitlab issues `: [](=issues tag:"stories")` 
+
+As a researcher in the Impact Group I can add and tag my desk research on known incidents with a particular tool or within a particular community
+
+As a member of the Impact Group who works closely with at-risk users, I have a place to record and tag anonymized digital security incidents and vulnerabilities as I learn about them, even if I do not have all of the details
+
+As a security techie in the Impact Group, I can add technical clarification and link to related research after learning of a new incident or vulnerability that has been added to the platform but that lacks details
+
+As a member of the Impact Group, I can link to and tag articles and reports that I think might be relevant to existing incidents or vulnerabilities on OII
+
+As a member of the Impact Group, I can easily learn of new additions to the platform that are relevant to my expertise or to the communities with which I work
 
 ## Approach
 
@@ -146,7 +173,7 @@ Managing comments in a code review tool:
  - mitigation: output commented version (generate diffs, tooltips and medium style side comments). Roundtripping that would be hard (i.e. adding comments by committing changes to the markdown versions) but probably doable. We're back to using Markdown as a persistence format.
 
 -->
-</div></body><hr><div class="section get-help"><div class="container"><h3 class="section-heading">Want to join the initiative?</h3><p class="section-description">Open Integrity needs your help to provide the best and most up to date information. Get in touch to join the initiative !</p><a href="mailto://contact@openintegrity.org" class="button button-primary">Get in touch</a></div></div><div class="section categories"><div class="container"><div class="row"><div class="two columns">&nbsp;</div><div class="eight column category"><h4>Developed with ❤ by</h4><a href="https://iilab.org"><img src="/openintegrity.org/images/iilab_white.svg" class="u-max-full-width"></a><h5>Information Innovation Lab</h5><p>Applied research and development of public interest technology.</p></div><div class="two columns">&nbsp;</div></div></div></div><script>var js = document.createElement('script')
+</div></body><hr><div class="section get-help"><div class="container"><h3 class="section-heading">Want to join the initiative?</h3><p class="section-description">Open Integrity needs your help to provide the best and most up to date information. Get in touch to join the initiative !</p><a href="mailto:contact@openintegrity.org" class="button button-primary">Get in touch</a></div></div><div class="section categories"><div class="container"><div class="row"><div class="two columns">&nbsp;</div><div class="eight column category"><h4>Developed with ❤ by</h4><a href="https://iilab.org"><img src="/openintegrity.org/images/iilab_white.svg" class="u-max-full-width"></a><h5>Information Innovation Lab</h5><p>Applied research and development of public interest technology.</p></div><div class="two columns">&nbsp;</div></div></div></div><script>var js = document.createElement('script')
 js.src = '//' + (location.host || 'localhost').split(':')[0] + ':3000/browser-sync/browser-sync-client.js'
 document.body.appendChild(js)
 </script></html>
