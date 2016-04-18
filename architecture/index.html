@@ -1,6 +1,41 @@
 <!DOCTYPE html><!--if lt IE 7<html class="ie ie6" lang="en">--><!--if IE 7<html class="ie ie7" lang="en">--><!--if IE 8<html class="ie ie8" lang="en">--><!--if (gte IE 9)|!(IE)<!--><html lang="en"> <!--
 --><html><head><meta charset="utf8"><title>Architecture &middot; Open Integrity</title><meta name="description" content=""><meta name="author" content=""><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><link rel="stylesheet" href="/openintegrity.org/css/skeleton.css"><link rel="stylesheet" href="/openintegrity.org/css/site.css"><!--if lt IE 9script(src="http://html5shim.googlecode.com/svn/trunk/html5.js")
 --><script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script><script src="/openintegrity.org/js/anchor.min.js"></script><script src="/openintegrity.org/js/site.js"></script><link rel="shortcut icon" href="/openintegrity.org/images/favicon.ico"><link rel="apple-touch-icon" href="/openintegrity.org/images/apple-touch-icon.png"><link rel="apple-touch-icon" sizes="72x72" href="/openintegrity.org/images/apple-touch-icon-72x72.png"><link rel="apple-touch-icon" sizes="114x114" href="/openintegrity.org/images/apple-touch-icon-114x114.png"><link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css"><link rel="alternate" type="application/rss+xml" title="RSS" href="{{ site.baseurl }}/atom.xml"></head><body class="has-docked-nav"><div class="container"><div class="navbar-spacer"></div><nav class="navbar"><div class="container"><ul class="navbar-list"><li class="navbar-item"><a href="/openintegrity.org" class="navbar-link">Home</a></li><li class="navbar-item"><a href="#" data-popover="#codeNavAbout" class="navbar-link">About</a><div id="codeNavAbout" class="popover"><ul class="popover-list"><li class="popover-item"><a href="/openintegrity.org/about" class="popover-link">Overview</a></li><li class="popover-item"><a href="/openintegrity.org/about#team" class="popover-link">Team</a></li><li class="popover-item"><a href="/openintegrity.org/about#partners" class="popover-link">Partners</a></li><li class="popover-item"><a href="/openintegrity.org/about#board" class="popover-link">Advisory Board</a></li></ul></div></li><li class="navbar-item"><a href="#" data-popover="#codeNavPopover" class="navbar-link">Approach</a><div id="codeNavPopover" class="popover"><ul class="popover-list"><li class="popover-item"><a href="/openintegrity.org/framework" class="popover-link">Overview</a></li><li class="popover-item"><a href="/openintegrity.org/impact" class="popover-link">Impact</a></li><li class="popover-item"><a href="/openintegrity.org/practices" class="popover-link">Practices</a></li><li class="popover-item"><a href="#" class="popover-link">Metrics (soon)</a></li><li class="popover-item"><a href="#" class="popover-link">Scores (soon)</a></li></ul></div></li><li class="navbar-item"><a href="/openintegrity.org/blog" class="navbar-link">Blog</a></li><li class="navbar-item"><a href="/openintegrity.org/join" class="navbar-link">Join</a></li></ul></div></nav><div class="row links"><small><div class="crumb u-pull-left"><a href="/openintegrity.org">Home</a> / Architecture</div><div class="utilities u-pull-right"><a href="https://code.iilab.org/openintegrity/architecture/edit/master/index.md">Edit</a> - <a href="https://code.iilab.org/openintegrity/architecture/commits/master/index.md">Changes</a> - <a href="https://code.iilab.org/openintegrity/architecture/tree/master/index.md">Source</a></div></small></div><h1 id="oii-technical-approach">OII Technical Approach</h1>
+<!-- MarkdownTOC depth=5 -->
+<ul>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#components">Components</a>
+<ul>
+<li><a href="#api-gateway">API Gateway</a>
+<ul>
+<li><a href="#purpose">Purpose</a></li>
+<li><a href="#implementation-options-kong-vs-tyk">Implementation Options: Kong vs Tyk</a></li>
+</ul></li>
+<li><a href="#core-data-services">Core Data Services</a>
+<ul>
+<li><a href="#purpose-1">Purpose</a></li>
+<li><a href="#implementation">Implementation</a></li>
+</ul></li>
+<li><a href="#metric-data-store">Metric Data Store</a>
+<ul>
+<li><a href="#purpose-2">Purpose</a></li>
+<li><a href="#implementation-1">Implementation</a></li>
+</ul></li>
+<li><a href="#metric-data-collection-agents">Metric Data Collection Agents</a>
+<ul>
+<li><a href="#purpose-3">Purpose</a></li>
+<li><a href="#development--deployment-guidelines">Development &amp; Deployment Guidelines</a></li>
+<li><a href="#example-approach-librariesio">Example Approach: Libraries.io</a></li>
+<li><a href="#example-approach-tosdr">Example Approach: TOSDR</a></li>
+</ul></li>
+<li><a href="#web-front-end">Web Front End</a>
+<ul>
+<li><a href="#purpose-4">Purpose</a></li>
+<li><a href="#implementation-static-generator-vs-cms-vs-custom-web-app-react">Implementation: Static Generator vs CMS vs Custom Web App (React)</a></li>
+</ul></li>
+</ul></li>
+</ul>
+<!-- /MarkdownTOC -->
 <h2 id="overview">Overview</h2>
 <p><img src="https://docs.google.com/drawings/image?id=sPci5xFGHd3v9hcOzrBKR2g&amp;rev=260&amp;h=455&amp;w=504&amp;ac=1" /></p>
 <h2 id="components">Components</h2>
@@ -9,49 +44,68 @@
 <p>An API Gateway has two key functions: it allows for consolidation of separately developed/deployed services under a single API and it also handles cross-cutting concerns for those services (e.g. authentication, access logging, rate limiting…). This allows OII to lower the barrier of entry for data provider partners while also providing a first-class experience for API consumers. Both sets of users would use the API Gateway to obtain access to the API. Partners might also be provided with a way to add their own services (to provide hosted metrics through the OII API, for example).</p>
 <h4 id="implementation-options-kong-vs-tyk">Implementation Options: Kong vs Tyk</h4>
 <p>The top open source API Gateways are Kong and Tyk. Both provide the core features mentioned above, offer a number of scripted deployment options, and are relatively active projects on Github. To evaluate which one was more appropriate for OII, both were installed in a local dev environment. See the figure below for a comparison of features.</p>
-<p>|------------------|-----|---|<br />
-| | | |<br />
-| | Tyk | |<br />
-|------------------|-----|---|<br />
-| Ease of | | |<br />
-| deployment | ✓ | |<br />
-|------------------|-----|---|<br />
-| API for | | |<br />
-| management | ✓ | |<br />
-|------------------|-----|---|<br />
-| Allows | | |<br />
-| import of API | | ✓ |<br />
-| definitions from | | |<br />
-| files | | |<br />
-|------------------|-----|---|<br />
-| Rate | | |<br />
-| limiting | ✓ | |<br />
-|------------------|-----|---|<br />
-| Request | | |<br />
-| logging | ✓ | |<br />
-|------------------|-----|---|<br />
-| API | | |<br />
-| versioning | | ✓ |<br />
-|------------------|-----|---|<br />
-| Key | | |<br />
-| authentication | ✓ | |<br />
-|------------------|-----|---|<br />
-| | | |<br />
-| ✓ | | |<br />
-|------------------|-----|---|<br />
-| Custom | | |<br />
-| event handlers | | ✓ |<br />
-|------------------|-----|---|</p>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th>Kong</th>
+<th>Tyk</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Ease of deployment</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr class="even">
+<td>API for management</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr class="odd">
+<td>Allows import of API definitions from files</td>
+<td></td>
+<td>✓</td>
+</tr>
+<tr class="even">
+<td>Rate limiting</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr class="odd">
+<td>Request logging</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr class="even">
+<td>API versioning</td>
+<td></td>
+<td>✓</td>
+</tr>
+<tr class="odd">
+<td>Key authentication</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr class="even">
+<td>OAuth2</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr class="odd">
+<td>Custom event handlers</td>
+<td></td>
+<td>✓</td>
+</tr>
+</tbody>
+</table>
 <p>In the end, it was determined that Tyk is a better fit for OII, primarily because of ease of configuration management through imported API definitions, but also because of unique features like API versioning and a more mature developer dashboard..</p>
 <h3 id="core-data-services">Core Data Services</h3>
 <h4 id="purpose-1">Purpose</h4>
-<p>The Core Data Services provide the ability to add, update, and<br />
-query the projects that are tracked by OII as well as manipulate data<br />
-through the approval pipeline as necessary. They also allow for basic<br />
-retrieval and submission of metrics for a given project.</p>
+<p>The Core Data Services provide the ability to add, update, and query the projects that are tracked by OII as well as manipulate data through the approval pipeline as necessary. They also allow for basic retrieval and submission of metrics for a given project.</p>
 <h4 id="implementation">Implementation</h4>
-<p>NodeJS is the baseline server technology for OII due to its ease of deployment and scaling, its good performance, the popularity of Javascript, and the availability of frameworks and tools for Node. The Core Data Services will be implemented in Node using Express. Since they will be served through the API Gateway, the services do not need to implement their own authentication or rate limiting. Therefore, a simple project structure such as the one employed here (<a href="https://www.google.com/url?q=https://github.com/developit/express-es6-rest-api&amp;sa=D&amp;ust=1460845242229000&amp;usg=AFQjCNHg4RckdCZPzLrmbF8qULv81WJvTA">https://github.com/developit/express-es6-rest-api</a>)<br />
-can be used.</p>
+<p>NodeJS is the baseline server technology for OII due to its ease of deployment and scaling, its good performance, the popularity of Javascript, and the availability of frameworks and tools for Node. The Core Data Services will be implemented in Node using Express. Since they will be served through the API Gateway, the services do not need to implement their own authentication or rate limiting. Therefore, a simple project structure such as the one employed here (<a href="https://www.google.com/url?q=https://github.com/developit/express-es6-rest-api&amp;sa=D&amp;ust=1460845242229000&amp;usg=AFQjCNHg4RckdCZPzLrmbF8qULv81WJvTA">https://github.com/developit/express-es6-rest-api</a>) can be used.</p>
 <p>Although an API Gateway would allow for a micro services architecture, the Core Data Services will likely all be a part of one deployable application since they are strongly tied together by data. Persistence will be to MongoDB to allow for a flexible schema and simple scalability.</p>
 <h3 id="metric-data-store">Metric Data Store</h3>
 <h4 id="purpose-2">Purpose</h4>
@@ -90,7 +144,7 @@ can be used.</p>
 <p>Three potential implementations of the front end were considered: static site generation using Content As Code (<a href="https://www.google.com/url?q=http://iilab.github.io/contentascode/&amp;sa=D&amp;ust=1460845242237000&amp;usg=AFQjCNGmAo4YYTUWvt9C8dpai2X75uUFuQ">http://iilab.github.io/contentascode/</a>), an off the shelf CMS, and a fully custom web app. All have advantages and drawbacks. The table below summarizes these pros and cons in the context of the requirements for the OII front end.</p>
 <table>
 <colgroup>
-<col style="width: 16%" />
+<col style="width: 15%" />
 <col style="width: 29%" />
 <col style="width: 24%" />
 <col style="width: 30%" />
@@ -106,15 +160,15 @@ can be used.</p>
 <tbody>
 <tr class="odd">
 <td>Maintenance of existing functionality</td>
-<td>⭑⭑⭑Once it’s deployed, it’s fairly maintenance free</td>
-<td>⭑Security and compatibility updates are common and necessary</td>
-<td>⭑⭑Can be built with minimal developer-maintained dependencies</td>
+<td>⭑⭑⭑ Once it’s deployed, it’s fairly maintenance free</td>
+<td>⭑ Security and compatibility updates are common and necessary</td>
+<td>⭑⭑ Can be built with minimal developer-maintained dependencies</td>
 </tr>
 <tr class="even">
 <td>Creation of new functionality</td>
-<td>⭑Focus is on text-based content</td>
-<td>⭑⭑Plugins may be created but are limited by the platform</td>
-<td>⭑⭑⭑Free reign to expand the app</td>
+<td>⭑ Focus is on text-based content</td>
+<td>⭑⭑ Plugins may be created but are limited by the platform</td>
+<td>⭑⭑⭑ Free reign to expand the app</td>
 </tr>
 <tr class="odd">
 <td>Ease of deployment</td>
@@ -124,14 +178,14 @@ can be used.</p>
 </tr>
 <tr class="even">
 <td>Text content creation flexibility</td>
-<td>⭑⭑⭑Content can easily be divided and expanded in whichever way is seen fit</td>
+<td>⭑⭑⭑ Content can easily be divided and expanded in whichever way is seen fit</td>
 <td>⭑⭑⭑</td>
-<td>⭑Content form is limited by the structure of the web app.</td>
+<td>⭑ Content form is limited by the structure of the web app.</td>
 </tr>
 <tr class="odd">
 <td>Content creation ease of use</td>
-<td>⭑⭑⭑Prose-based editor is simple and distraction free</td>
-<td>⭑⭑The CMS must be learned before use</td>
+<td>⭑⭑⭑ Prose-based editor is simple and distraction free</td>
+<td>⭑⭑ The CMS must be learned before use</td>
 <td>⭑</td>
 </tr>
 <tr class="even">
@@ -144,13 +198,13 @@ can be used.</p>
 <td>Dynamic content loading</td>
 <td>⭑</td>
 <td>⭑</td>
-<td>⭑⭑⭑Progressive loading of content is simple in a web app</td>
+<td>⭑⭑⭑ Progressive loading of content is simple in a web app</td>
 </tr>
 <tr class="even">
 <td>Advanced visualizations</td>
 <td>⭑</td>
 <td>⭑</td>
-<td>⭑⭑⭑Structured content is easy to work with and can be backed by an API or db</td>
+<td>⭑⭑⭑ Structured content is easy to work with and can be backed by an API or db</td>
 </tr>
 <tr class="odd">
 <td>Search</td>
