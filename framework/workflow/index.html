@@ -6,6 +6,7 @@
 <li><a href="#use-cases">Use cases</a>
 <ul>
 <li><a href="#framework-taking-stock-of-the-evolution-of-the-threat-landscape">Framework: Taking stock of the evolution of the Threat Landscape</a></li>
+<li><a href="#data-getting-to-the-layers-behind-a-single-data-point">Data: Getting to the layers behind a single data point</a></li>
 <li><a href="#framework-community-of-practice-participants">Framework: Community of Practice participants</a>
 <ul>
 <li><a href="#practice-lifecycle">Practice lifecycle</a></li>
@@ -54,6 +55,34 @@
 <li>Discussion on metrics for Best Practice -&gt; Metrics</li>
 <li>Discussion of potential measurement approaches -&gt; Metrics (measurement)</li>
 <li>Development of collection methodologies or collection agent proof-of-concepts -&gt; Metrics (collection) <a href="https://code.iilab.org/openintegrity/framework/issues/8">#10</a></li>
+</ul>
+<h2 id="data-getting-to-the-layers-behind-a-single-data-point">Data: Getting to the layers behind a single data point</h2>
+<p><strong>Data Consumer: From Data point to Impact story</strong></p>
+<ul>
+<li>Data Consumer looks up Skype</li>
+<li>They see a data point on 2FA availability which says that it is &quot;only available with a Microsoft account&quot;.</li>
+<li>They see that the data point has been reviewed by a number of individuals/organisations the data consumer trusts.</li>
+<li>They can click on a &quot;?&quot; icon to get more information about the context of this particular data point such as:</li>
+<li>Measurement Metadata:
+<ul>
+<li>Source (which, which collection approach, verification approach,...)</li>
+<li>Collection (date, collecting agent,...)</li>
+</ul></li>
+<li>Metric Metadata:
+<ul>
+<li>Explanation: How is this particular data point correlated to the adoption of 2FA for this tool?</li>
+<li>Metric Type: It could be that it's an expert review, a user review, has a screenshot or a web page capture as evidence, from one or many network vantage points - offering different correlation strength.</li>
+</ul></li>
+<li>Practice Metadata:
+<ul>
+<li>Definition: How is 2FA understood? What is the scope of our definition for it.</li>
+<li>Mitigation: Which attack pattern does it mitigate and how? &lt;- this is a result of the Practice (decision) framework process.</li>
+</ul></li>
+<li>Impact Metadata
+<ul>
+<li>Pattern: What is the alice and bob description of the attack pattern.</li>
+<li>Stories: Which reported stories fall under this attack pattern category.</li>
+</ul></li>
 </ul>
 <h2 id="framework-community-of-practice-participants">Framework: Community of Practice participants</h2>
 <blockquote>
