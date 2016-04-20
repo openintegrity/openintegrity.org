@@ -41,13 +41,13 @@ Please <a href="https://code.iilab.org">register first</a> and use the <a href="
 </ul>
 <!-- /MarkdownTOC -->
 <h2 id="overview">Overview</h2>
-<p><img src="https://docs.google.com/drawings/image?id=sPci5xFGHd3v9hcOzrBKR2g&amp;rev=260&amp;h=455&amp;w=504&amp;ac=1" /></p>
+<p><img src="../images/architecture.png" /></p>
 <h2 id="components">Components</h2>
 <h3 id="api-gateway">API Gateway</h3>
 <h4 id="purpose">Purpose</h4>
 <p>An API Gateway has two key functions: it allows for consolidation of separately developed/deployed services under a single API and it also handles cross-cutting concerns for those services (e.g. authentication, access logging, rate limiting…). This allows OII to lower the barrier of entry for data provider partners while also providing a first-class experience for API consumers. Both sets of users would use the API Gateway to obtain access to the API. Partners might also be provided with a way to add their own services (to provide hosted metrics through the OII API, for example).</p>
 <h4 id="implementation-options-kong-vs-tyk">Implementation Options: Kong vs Tyk</h4>
-<p>The top open source API Gateways are Kong and Tyk. Both provide the core features mentioned above, offer a number of scripted deployment options, and are relatively active projects on Github. To evaluate which one was more appropriate for OII, both were installed in a local dev environment. See the figure below for a comparison of features.</p>
+<p>The top open source API Gateways are <a href="https://getkong.org/">Kong</a> and <a href="https://tyk.io">Tyk</a>. Both provide the core features mentioned above, offer a number of scripted deployment options, and are relatively active projects on Github. To evaluate which one was more appropriate for OII, both were installed in a local dev environment. See the figure below for a comparison of features.</p>
 <table>
 <thead>
 <tr class="header">
@@ -109,7 +109,7 @@ Please <a href="https://code.iilab.org">register first</a> and use the <a href="
 <h4 id="purpose-1">Purpose</h4>
 <p>The Core Data Services provide the ability to add, update, and query the projects that are tracked by OII as well as manipulate data through the approval pipeline as necessary. They also allow for basic retrieval and submission of metrics for a given project.</p>
 <h4 id="implementation">Implementation</h4>
-<p>NodeJS is the baseline server technology for OII due to its ease of deployment and scaling, its good performance, the popularity of Javascript, and the availability of frameworks and tools for Node. The Core Data Services will be implemented in Node using Express. Since they will be served through the API Gateway, the services do not need to implement their own authentication or rate limiting. Therefore, a simple project structure such as the one employed here (<a href="https://www.google.com/url?q=https://github.com/developit/express-es6-rest-api&amp;sa=D&amp;ust=1460845242229000&amp;usg=AFQjCNHg4RckdCZPzLrmbF8qULv81WJvTA">https://github.com/developit/express-es6-rest-api</a>) can be used.</p>
+<p>NodeJS is the baseline server technology for OII due to its ease of deployment and scaling, its good performance, the popularity of Javascript, and the availability of frameworks and tools for Node. The Core Data Services will be implemented in Node using Express. Since they will be served through the API Gateway, the services do not need to implement their own authentication or rate limiting. Therefore, a simple project structure such as the one employed here (<a href="https://github.com/developit/express-es6-rest-api" class="uri">https://github.com/developit/express-es6-rest-api</a>) can be used.</p>
 <p>Although an API Gateway would allow for a micro services architecture, the Core Data Services will likely all be a part of one deployable application since they are strongly tied together by data. Persistence will be to MongoDB to allow for a flexible schema and simple scalability.</p>
 <h3 id="metric-data-store">Metric Data Store</h3>
 <h4 id="purpose-2">Purpose</h4>
@@ -136,16 +136,16 @@ Please <a href="https://code.iilab.org">register first</a> and use the <a href="
 <li>Avoid updating timestamps in returned data if no data has changed</li>
 </ul>
 <h4 id="example-approach-libraries.io">Example Approach: Libraries.io</h4>
-<p>Since Libraries.io offers its own API, there are a couple of different integration options available, depending on the exact metric data needed from it. The first method would be to proxy their API by simply configuring the API Gateway. This works if the data provided through a given metric is relatively unchanged from what Libraries.io provides. The API Gateway allows for simple structural changes to returned JSON.</p>
-<p>The second method for integration is to create a Collection Agent. This agent would query Libraries.io at a predetermined frequency and store the results in OII’s data store for later retrieval. This method would be more appropriate if several different metrics are all derived from the same source. In this case, an agent can drastically reduce the amount of API calls necessary to get the data from Libraries.io.</p>
+<p>Since <a href="https://libraries.io">Libraries.io</a> offers its own API, there are a couple of different integration options available, depending on the exact metric data needed from it. The first method would be to proxy their API by simply configuring the API Gateway. This works if the data provided through a given metric is relatively unchanged from what Libraries.io provides. The API Gateway allows for simple structural changes to returned JSON.</p>
+<p>The second method for integration is to create a Collection Agent. This agent would query <a href="https://libraries.io">Libraries.io</a> at a predetermined frequency and store the results in OII’s data store for later retrieval. This method would be more appropriate if several different metrics are all derived from the same source. In this case, an agent can drastically reduce the amount of API calls necessary to get the data from Libraries.io.</p>
 <h4 id="example-approach-tosdr">Example Approach: TOSDR</h4>
-<p>TOSDR data would also be a candidate for proxying through the API Gateway. However, other options are also available if it is desirable to extract certain pieces of data from the results. Since TOSDR stores data in Github, it is easily retrievable through either direct file urls or the Github API. The API could be particularly useful in this case, since polling could be done on the API call to get commit information. When a new commit is detected, only the affected files would need to be re-fetched.</p>
+<p><a href="https://tosdr.org">TOSDR</a> data would also be a candidate for proxying through the API Gateway. However, other options are also available if it is desirable to extract certain pieces of data from the results. Since TOSDR stores data in Github, it is easily retrievable through either direct file urls or the Github API. The API could be particularly useful in this case, since polling could be done on the API call to get commit information. When a new commit is detected, only the affected files would need to be re-fetched.</p>
 <h3 id="web-front-end">Web Front End</h3>
 <h4 id="purpose-4">Purpose</h4>
 <p>The web front end is the face of OII and allows a user to interact with the API without any programming knowledge. This site has two goals<br />
 — to make data on tracked projects available for viewing and to educate users on how the data is collected and how it might be interpreted.</p>
 <h4 id="implementation-static-generator-vs-cms-vs-custom-web-app-react">Implementation: Static Generator vs CMS vs Custom Web App (React)</h4>
-<p>Three potential implementations of the front end were considered: static site generation using Content As Code (<a href="https://www.google.com/url?q=http://iilab.github.io/contentascode/&amp;sa=D&amp;ust=1460845242237000&amp;usg=AFQjCNGmAo4YYTUWvt9C8dpai2X75uUFuQ">http://iilab.github.io/contentascode/</a>), an off the shelf CMS, and a fully custom web app. All have advantages and drawbacks. The table below summarizes these pros and cons in the context of the requirements for the OII front end.</p>
+<p>Three potential implementations of the front end were considered: static site generation using Content As Code (<a href="http://iilab.github.io/contentascode/" class="uri">http://iilab.github.io/contentascode/</a>), an off the shelf CMS, and a fully custom web app. All have advantages and drawbacks. The table below summarizes these pros and cons in the context of the requirements for the OII front end.</p>
 <table>
 <colgroup>
 <col style="width: 15%" />
