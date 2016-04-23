@@ -1,0 +1,8 @@
+- var source_base = site.code.base+(subrepo?subrepo:site.code.repo)
+- var source_path = site.code.current_branch+(subrepo?source.replace("/"+subrepo,""):source)
+.utilities.u-pull-right
+    a(href=source_base+"/edit/"+source_path) Edit
+    |  - 
+    a(href=source_base+"/commits/"+source_path) Changes
+    |  - 
+    a(href=source_base+"/tree/"+source_path) Source

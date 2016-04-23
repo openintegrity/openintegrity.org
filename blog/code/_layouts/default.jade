@@ -1,0 +1,93 @@
+doctype html
+
+//if lt IE 7
+  <html class="ie ie6" lang="en">
+//if IE 7
+  <html class="ie ie7" lang="en">
+//if IE 8
+  <html class="ie ie8" lang="en">
+//if (gte IE 9)|!(IE)
+  <!--><html lang="en"> <!--
+
+html
+  include head
+  body(class=header=="hero"?header:"has-docked-nav")
+    .container
+      block header
+        != header
+      include navbar
+      if header==hero
+        //- nav.subnavbar
+        //-   small.container
+        //-     ul.navbar-list
+        //-       - var crumbs = path.split('/')
+        //-       - var capitalize = function(text){ return text.toLowerCase().replace( /\b\w/g, function (m) { return m.toUpperCase(); }) };
+        //-         li.navbar-item: a(href=site.baseurl) Home
+        //-         each crumb,i in crumbs 
+        //-           - var crumb_display = crumb.replace('-',' ').replace('.html', '')
+        //-           if i==crumbs.length -1 
+        //-             | / 
+        //-             = capitalize(crumb_display)
+        //-           else
+        //-             | / 
+        //-             li.navbar-item: a(href=site.baseurl+crumb+'/')= capitalize(crumb_display)
+        //-             |   
+        //-       .utilities.u-pull-right
+        //-           li.navbar-item: a(href=site.github.repository_url+"/edit/"+site.github.current_branch+source) Edit this page
+        //-           |  - 
+        //-           li.navbar-item: a(href=site.github.repository_url+"/commits/"+site.github.current_branch+source) View page history
+        //-           |  - 
+        //-           li.navbar-item: a(href=site.github.repository_url+"/tree/"+site.github.current_branch+source) View page source
+
+        .row.links
+          small
+            include includes/breadcrumbs
+            include includes/collaboration
+      block main
+        != content
+      unless header==hero
+        .row.links
+          small
+            include includes/collaboration
+        hr
+      block footer
+        != footer
+  include foot
+
+  script.
+    $( document ).ready(function() {
+      anchors.options.placement = 'left';
+      anchors.add('h1,h2,h3');
+    })
+
+  //- script.
+  //-   var js = document.createElement('script')
+  //-   js.src = '//' + (location.host || 'localhost').split(':')[0] + ':3000/browser-sync/browser-sync-client.js'
+  //-   document.body.appendChild(js)
+
+//-     <div>
+//-       {% assign crumbs = page.url | remove:'/index.html' | split: '/' %}
+//-       <small>
+//-         <div style="float:left"><a href="{{ site.baseurl }}/">Home</a>
+//-         {% for crumb in crumbs offset: 1 %}
+//-           {% if forloop.last %}
+//-             / {{ crumb | replace:'-',' ' | remove:'.html' | capitalize }}
+//-           {% else %}
+//-             / <a href="{{ site.baseurl }}{% assign crumb_limit = forloop.index | plus: 1 %}{% for crumb in crumbs limit: crumb_limit %}{{ crumb | append: '/' }}{% endfor %}">{{ crumb | replace:'-',' ' | remove:'.html' | capitalize }}</a>
+//-           {% endif %}
+//-         {% endfor %}
+//-         </div>
+
+//-         <div style="float:right"><em><a href="{{site.github.repository_url}}/edit/{{site.github.current_branch}}{{source}}">Edit this page</a> - <a href="{{site.github.repository_url}}/commits/{{site.github.current_branch}}{{source}}">View page history</a> - <a href="{{site.github.repository_url}}/tree/{{site.github.current_branch}}{{source}}">View page source</a></em>
+//-         </div>
+//-       </small>
+//-     </div>
+
+//-     <div class="page" style="clear:both">
+//-       <h1 class="page-title">{{ page.title }}</h1>
+//-       {{ content }}
+//-     </div>
+
+//-     </div>
+//-   </body>
+//- </html>

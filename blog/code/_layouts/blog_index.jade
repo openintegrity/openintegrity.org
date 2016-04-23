@@ -1,0 +1,13 @@
+extends default
+
+block main
+  each post in site.posts.slice(0,10)
+    .docs-section
+    h6.docs-header 
+      a(href=site.baseurl+"/blog/" + post.datebasename)= post.title
+      // small= moment(post.date).format("%Y-%m-%j")
+      small= post.date
+    if post.children
+      != post.children[0]
+    else
+      != post.content

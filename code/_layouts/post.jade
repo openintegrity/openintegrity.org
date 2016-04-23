@@ -1,0 +1,18 @@
+extends default
+
+block main
+  h1.doc-header= page.title
+
+  .post
+    span.post-date= page.date
+    != content
+
+  if site.related_posts
+    .related
+      h2 Related Posts
+      ul.related-posts
+        each post in site.related_posts.slice(0,2)
+          li
+            h3
+              a(href=site.baseurl+post.url)= post.title
+              small post.date | date_to_string

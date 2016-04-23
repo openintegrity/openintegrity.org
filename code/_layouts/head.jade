@@ -1,0 +1,44 @@
+head
+
+    - // Basic Page Needs
+    - // ==================================================
+    meta(charset="utf8")
+    if page.title == "Home"
+      title #{site.title} &middot; #{site.tagline}
+    else
+      title #{page.title} &middot; #{site.title}
+
+    meta(name="description", content="")
+    meta(name="author", content="")
+
+    - // Mobile Specific Metas
+    - // ==================================================
+    meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1")
+
+    - // CSS
+    - // ==================================================
+    link(rel="stylesheet", href=site.baseurl+"/css/skeleton.css")
+    link(rel="stylesheet", href=site.baseurl+"/css/site.css")
+    //if lt IE 9
+        script(src="http://html5shim.googlecode.com/svn/trunk/html5.js")
+
+    - // JS
+    script(src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js")
+    script(src=site.baseurl+"/js/anchor.min.js")
+    script(src=site.baseurl+"/js/site.js")
+
+    - // Favicons
+    - // ==================================================
+    link(rel="shortcut icon", href=site.baseurl+"/images/favicon.ico")
+    link(rel="apple-touch-icon", href=site.baseurl+"/images/apple-touch-icon.png")
+    link(rel="apple-touch-icon", sizes="72x72", href=site.baseurl+"/images/apple-touch-icon-72x72.png")
+    link(rel="apple-touch-icon", sizes="114x114", href=site.baseurl+"/images/apple-touch-icon-114x114.png")
+
+    - // Fonts
+    - // ==================================================
+    link(href='//fonts.googleapis.com/css?family=Raleway:400,300,600', rel='stylesheet', type='text/css')
+    link(href='//fonts.googleapis.com/css?family=Lora:400,300,600', rel='stylesheet', type='text/css')
+
+    - // RSS
+    - // ==================================================
+    link(rel="alternate", type="application/rss+xml", title="RSS", href="{{ site.baseurl }}/atom.xml")

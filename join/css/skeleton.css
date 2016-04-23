@@ -201,16 +201,20 @@ html {
   font-size: 62.5%; }
 
 body {
-  font-size: 1.5em;
+  font-size: 2em;
   line-height: 1.6;
   font-weight: 400;
-  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Lora", Georgia, Cambria, "Times New Roman", Times, serif;
   color: #222; }
 
 a {
-  color: #1eaedb; }
+  color: #1eaedb;
+  text-decoration: none;
+  border-bottom: 1px #1eaedb dotted; }
   a:hover {
-    color: #1b9cc5; }
+    color: #1b9cc5;
+    text-decoration: none;
+    border-bottom: 1px #1eaedb solid; }
 
 hr {
   margin-top: 3rem;

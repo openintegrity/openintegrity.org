@@ -1,0 +1,25 @@
+.navbar-spacer
+nav.navbar
+  .container
+    ul.navbar-list
+      li.navbar-item
+        a.navbar-link(class=page.path===site.baseurl?"active":"",href=site.baseurl) Home
+      li.navbar-item
+        a.navbar-link(href="#",data-popover="#codeNavAbout") About
+        #codeNavAbout.popover
+          ul.popover-list
+            li.popover-item: a.popover-link(href=site.baseurl+"/about") Overview
+            li.popover-item: a.popover-link(href=site.baseurl+"/about#team") Team
+            li.popover-item: a.popover-link(href=site.baseurl+"/about#partners") Partners
+            li.popover-item: a.popover-link(href=site.baseurl+"/about#board") Advisory Board
+      li.navbar-item
+        a.navbar-link(href="#",data-popover="#codeNavPopover") Approach
+        #codeNavPopover.popover
+          ul.popover-list
+            li.popover-item: a.popover-link(href=site.baseurl+"/framework") Overview
+            li.popover-item: a.popover-link(href=site.baseurl+"/impact") Impact
+            li.popover-item: a.popover-link(href=site.baseurl+"/practices") Practices
+            li.popover-item: a.popover-link(href="#") Metrics (soon)
+            li.popover-item: a.popover-link(href="#") Scores (soon)
+      li.navbar-item: a.navbar-link(href=site.baseurl+"/blog") Blog
+      li.navbar-item: a.navbar-link(href=site.baseurl+"/join") Join

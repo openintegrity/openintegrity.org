@@ -1,0 +1,124 @@
+<!DOCTYPE html><!--if lt IE 7<html class="ie ie6" lang="en">--><!--if IE 7<html class="ie ie7" lang="en">--><!--if IE 8<html class="ie ie8" lang="en">--><!--if (gte IE 9)|!(IE)<!--><html lang="en"> <!--
+--><html><head><meta charset="utf8"><title> &middot; Open Integrity</title><meta name="description" content=""><meta name="author" content=""><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><link rel="stylesheet" href="/openintegrity.org/css/skeleton.css"><link rel="stylesheet" href="/openintegrity.org/css/site.css"><!--if lt IE 9script(src="http://html5shim.googlecode.com/svn/trunk/html5.js")
+--><script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script><script src="/openintegrity.org/js/anchor.min.js"></script><script src="/openintegrity.org/js/site.js"></script><link rel="shortcut icon" href="/openintegrity.org/images/favicon.ico"><link rel="apple-touch-icon" href="/openintegrity.org/images/apple-touch-icon.png"><link rel="apple-touch-icon" sizes="72x72" href="/openintegrity.org/images/apple-touch-icon-72x72.png"><link rel="apple-touch-icon" sizes="114x114" href="/openintegrity.org/images/apple-touch-icon-114x114.png"><link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css"><link href="//fonts.googleapis.com/css?family=Lora:400,300,600" rel="stylesheet" type="text/css"><link rel="alternate" type="application/rss+xml" title="RSS" href="{{ site.baseurl }}/atom.xml"></head><body class="has-docked-nav"><div class="container"><div class="navbar-spacer"></div><nav class="navbar"><div class="container"><ul class="navbar-list"><li class="navbar-item"><a href="/openintegrity.org" class="navbar-link">Home</a></li><li class="navbar-item"><a href="#" data-popover="#codeNavAbout" class="navbar-link">About</a><div id="codeNavAbout" class="popover"><ul class="popover-list"><li class="popover-item"><a href="/openintegrity.org/about" class="popover-link">Overview</a></li><li class="popover-item"><a href="/openintegrity.org/about#team" class="popover-link">Team</a></li><li class="popover-item"><a href="/openintegrity.org/about#partners" class="popover-link">Partners</a></li><li class="popover-item"><a href="/openintegrity.org/about#board" class="popover-link">Advisory Board</a></li></ul></div></li><li class="navbar-item"><a href="#" data-popover="#codeNavPopover" class="navbar-link">Approach</a><div id="codeNavPopover" class="popover"><ul class="popover-list"><li class="popover-item"><a href="/openintegrity.org/framework" class="popover-link">Overview</a></li><li class="popover-item"><a href="/openintegrity.org/impact" class="popover-link">Impact</a></li><li class="popover-item"><a href="/openintegrity.org/practices" class="popover-link">Practices</a></li><li class="popover-item"><a href="#" class="popover-link">Metrics (soon)</a></li><li class="popover-item"><a href="#" class="popover-link">Scores (soon)</a></li></ul></div></li><li class="navbar-item"><a href="/openintegrity.org/blog" class="navbar-link">Blog</a></li><li class="navbar-item"><a href="/openintegrity.org/join" class="navbar-link">Join</a></li></ul></div></nav><div class="row links"><small><div class="crumb u-pull-left"><a href="/openintegrity.org">Home</a> / <a href="/openintegrity.org/framework/">Framework</a>  / <a href="/openintegrity.org/framework/workflow/">Workflow</a>  / Specifications</div><div class="utilities u-pull-right"><a href="https://code.iilab.org/openintegrity/framework/edit/master/workflow/specifications.md">Edit</a> - <a href="https://code.iilab.org/openintegrity/framework/commits/master/workflow/specifications.md">Changes</a> - <a href="https://code.iilab.org/openintegrity/framework/tree/master/workflow/specifications.md">Source</a></div></small></div><div class="docs-section"><div class="space"> </div><h1 id="workflow-specifications">Workflow Specifications</h1>
+<ul>
+<li>statuses/tags/columns should have an imperative name which reflects a call to action</li>
+</ul>
+<!-- MarkdownTOC -->
+<ul>
+<li><a href="#spaces">Spaces</a>
+<ul>
+<li><a href="#impact">Impact</a></li>
+<li><a href="#practices">Practices</a></li>
+</ul></li>
+<li><a href="#roles">Roles</a>
+<ul>
+<li><a href="#anonymousguest">Anonymous/Guest</a></li>
+<li><a href="#participant">Participant</a></li>
+<li><a href="#harvesters">Harvesters</a></li>
+<li><a href="#wrapper">Wrapper</a></li>
+<li><a href="#moderator">Moderator</a></li>
+<li><a href="#developers">Developers</a></li>
+</ul></li>
+<li><a href="#features">Features</a></li>
+<li><a href="#bottom-up-specs">Bottom Up specs</a>
+<ul>
+<li><a href="#pull-requests">Pull Requests</a></li>
+</ul></li>
+</ul>
+<!-- /MarkdownTOC -->
+<h2 id="spaces">Spaces</h2>
+<h3 id="impact">Impact</h3>
+<p>Impact stories might benefit from being private by default (should there be a globaleaks frontend?)</p>
+<ul>
+<li>stories
+<ul>
+<li>statuses
+<ul>
+<li>check ('for spam, proper deanonymisation')</li>
+<li>verify ('assign a verification level')</li>
+<li>analyse ('assign an attack pattern')</li>
+<li>accepted</li>
+</ul></li>
+</ul></li>
+<li>patterns
+<ul>
+<li>statuses
+<ul>
+<li>analyse</li>
+<li>accepted</li>
+</ul></li>
+</ul></li>
+</ul>
+<p>Notifications</p>
+<ul>
+<li>New patterns being submitted should alert the whole of the Practice groups.</li>
+<li>Stories added to existing patterns should notify
+<ul>
+<li>Participants who subscribed to the Pattern</li>
+<li>Moderators that will submit</li>
+</ul></li>
+</ul>
+<p>There should be some possibility to send back for additional information.</p>
+<h3 id="practices">Practices</h3>
+<p>There might be a need for administrative interfaces for moderators?</p>
+<p>Is access control at the git repo level (protecting the master branch or maybe another review branch) sufficient for the workflow?</p>
+<h1 id="roles">Roles</h1>
+<h2 id="anonymousguest">Anonymous/Guest</h2>
+<ul>
+<li>Should be able to post (with IP logged? Signature)</li>
+</ul>
+<h2 id="participant">Participant</h2>
+<ul>
+<li>Should be able to create an account (on Gitlab? A separate oii instance?)</li>
+</ul>
+<h2 id="harvesters">Harvesters</h2>
+<blockquote>
+<p>Extracts key ideas from a discussion thread. See <a href="http://assembl.org/what-is-assembl/" class="uri">http://assembl.org/what-is-assembl/</a></p>
+</blockquote>
+<ul>
+<li>The action should be higlighting. (Carnival?)</li>
+<li>The nuggets should be made available as independent files? Or as transclusion targets?</li>
+</ul>
+<h2 id="wrapper">Wrapper</h2>
+<blockquote>
+<p>Create summaries of the key ideas and submit the syntheses to the group for rough consensus or line-by-line voting. See <a href="http://assembl.org/what-is-assembl/" class="uri">http://assembl.org/what-is-assembl/</a></p>
+</blockquote>
+<h2 id="moderator">Moderator</h2>
+<blockquote>
+<p>Enforces code of conduct.</p>
+</blockquote>
+<h2 id="developers">Developers</h2>
+<blockquote>
+<p>Ownership of the tools (domain,...)</p>
+</blockquote>
+<h1 id="features">Features</h1>
+<ul>
+<li>Add a form as part of the Prose new document creation.</li>
+</ul>
+<h1 id="bottom-up-specs">Bottom Up specs</h1>
+<p>Starting from existing features in the content as code stack, how do they apply to the OII Framework?</p>
+<h2 id="pull-requests">Pull Requests</h2>
+<p>I think pull request are in fact a very good match for a large task that cuts across several issues but has a clear end and requires participation. I think therefore it's a good fit at the design phase for instance for:</p>
+<ul>
+<li>Getting the website's homepage language and design and development aligned and have contribution from the whole team and beyond.</li>
+</ul>
+<p>Later on it could be used as an approach for for instance:</p>
+<ul>
+<li>The monthly summary of the overal evolution of the practice space (the &quot;Synthesis&quot; or &quot;Wrapping&quot; phase of Assembl).</li>
+<li>Evolution of the threat landscape and discussion of implications across practices.</li>
+<li>Within specific roles</li>
+<li>Dispute on the data platform? This would mean a deep integration of the data platform with Git/Gitlab as a workflow management component which might be a good thing</li>
+<li>Qualitative reviews on the data platform? For instance the TOSDR workflow could probably be moved to there (from the current google group workflow)</li>
+<li>Moderation of impact submission?</li>
+</ul>
+<p>Could be used for:</p>
+<ul>
+<li>a particular event where information needs to be processed</li>
+<li>a document that's parsed or another</li>
+</ul>
+</div></div></body><hr><div class="section get-help"><div class="container"><h3 class="section-heading">Want to join the initiative?</h3><p class="section-description">Open Integrity needs your help to provide the best and most up to date information. Get in touch to join the initiative !</p><a href="mailto:contact@openintegrity.org" class="button button-primary">Get in touch</a></div></div><div class="section categories"><div class="container"><div class="row"><div class="two columns">&nbsp;</div><div class="eight column category"><h4>Developed with ❤ by</h4><a href="https://iilab.org"><img src="/openintegrity.org/images/iilab_white.svg" class="u-max-full-width"></a><h5>Information Innovation Lab</h5><p>Applied research and development of public interest technology.</p></div><div class="two columns">&nbsp;</div></div></div></div><script>$( document ).ready(function() {
+  anchors.options.placement = 'left';
+  anchors.add('h1,h2,h3');
+})
+</script></html>
