@@ -4,9 +4,12 @@ h1, h2, h3, h4, h5, h6, nav a, .links small a, .links small {
 }
 
 .links small {
-  font-size:60%;
+  font-size: 60%;
 }
 
+.category {
+  font-size: 80%;
+}
 h1, .space {
   margin-top: 4rem
 }

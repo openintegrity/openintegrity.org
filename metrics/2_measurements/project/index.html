@@ -6,8 +6,91 @@
 <blockquote>
 <p>There are binary artifacts that in fact contain several projects. There are projects that are in fact dependent on other binaries running elsewhere (server, or peers). A project is the high level thing. This is hard but we start simply with our 5 and go in more detail as we need. Is it going to enlarge the metric space if we add details? See <a href="../architecture/scale">thoughts about scale</a>.</p>
 </blockquote>
-<p>:<a href="../../schema/metrics/projects/id"></a></p>
-<p>ERROR: Could not read file (../../schema/metrics/projects/id)</p>
+<h1 id="project-identifier-1">Project identifier</h1>
+<ul>
+<li>metadata
+<ul>
+<li>path: /schema/metrics/meta/project/id</li>
+</ul></li>
+<li>type
+<ul>
+<li>URI</li>
+</ul></li>
+</ul>
+<h3 id="project-name">Project name</h3>
+<blockquote>
+<p>This should probably be composed of an official name, as well as aliases or other commonly used names.</p>
+</blockquote>
+<h3 id="project-name-1">Project name</h3>
+<ul>
+<li>String</li>
+</ul>
+<h3 id="project-owner">Project owner</h3>
+<blockquote>
+<p>This can be an organisation, a group or individual. Owner identifier (opencorporate id | group | individual ). Not impossible that there would be multiple owners.</p>
+</blockquote>
+<h3 id="project-owner-1">Project owner</h3>
+<ul>
+<li>{ URI , OwnerType := company | group | individual }</li>
+</ul>
+<h3 id="project-website">Project website</h3>
+<blockquote>
+<p>There are probably sites in many languages.</p>
+</blockquote>
+<h3 id="project-website-1">Project website</h3>
+<p>Type</p>
+<ul>
+<li>[ { URI, Country, Language } ]</li>
+</ul>
+<h3 id="project-documentation">Project Documentation <a href="#" title="Not in the original metrics sheet">?</a></h3>
+<blockquote>
+<p>Possibly many types (User documentation or manual, administrators' manual, technical documentation, architecture documentation, protocol or schema documentation, api documentation...)</p>
+</blockquote>
+<h3 id="section">?</h3>
+<h3 id="project-code-repositories">Project code repositories</h3>
+<blockquote>
+<p>Project would be generally composed of multiple repository. Either because they're made of multiple components, or because they have variations based on platforms, or other factors (community version, censored version,...). Not easy to differentiate a component from a library... But probably from an OII standpoint it doesn't matter (i.e. it's just a label). Some components are reusable across platforms.</p>
+</blockquote>
+<blockquote>
+<p>Components (i.e. what if its clear that it has a closed source server side component? Use Placeholders until evidence helps determine actual component structure).</p>
+</blockquote>
+<h3 id="project-code-repositories-1">Project code repositories</h3>
+<ul>
+<li>[ { URI, [ Platforms ] }]</li>
+</ul>
+<h3 id="project-download-link-service-end-point">Project download link / service end-point</h3>
+<blockquote>
+<p>Keeping track of versions and downloads is a potentially large feature. What is the MVP approach to downloads?</p>
+</blockquote>
+<ul>
+<li>Input download link + pattern for parsing version number.</li>
+<li>Download binary.</li>
+<li>Compute and verify checksum.</li>
+</ul>
+<p>The metric could be:</p>
+<p>/:id/downloads<br />
+-&gt; [ { URI , md5, version } ]</p>
+<p>/:id/downloads/:vers/url<br />
+-&gt; URL</p>
+<p>/:id/downloads/:vers/md5<br />
+-&gt; md5</p>
+<h3 id="project-download-entry">Project download / entry</h3>
+<ul>
+<li>[ { URI, [ Platforms ], EntryType := Download | DownloadPage | APIEntryPoint } ]</li>
+</ul>
+<h3 id="project-issue-tracker">Project issue tracker</h3>
+<h3 id="project-issue-tracker-1">Project issue tracker</h3>
+<ul>
+<li>Project issue tracker</li>
+</ul>
+<h3 id="project-current-release-version">Project current release version</h3>
+<h3 id="project-current-release">Project current release</h3>
+<ul>
+<li>Project current release version
+<ul>
+<li></li>
+</ul></li>
+</ul>
 </div></div></body><hr><div class="section get-help"><div class="container"><h3 class="section-heading">Want to join the initiative?</h3><p class="section-description">Open Integrity needs your help to provide the best and most up to date information. Get in touch to join the initiative !</p><a href="mailto:contact@openintegrity.org" class="button button-primary">Get in touch</a></div></div><div class="section categories"><div class="container"><div class="row"><div class="two columns">&nbsp;</div><div class="eight column category"><h4>Developed with ❤ by</h4><a href="https://iilab.org"><img src="/openintegrity.org/images/iilab_white.svg" class="u-max-full-width"></a><h5>Information Innovation Lab</h5><p>Applied research and development of public interest technology.</p></div><div class="two columns">&nbsp;</div></div></div></div><script>$( document ).ready(function() {
   anchors.options.placement = 'left';
   anchors.add('h1,h2,h3');
