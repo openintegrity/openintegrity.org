@@ -1,0 +1,77 @@
+Name,Object,Category,Sub-Category,Data Type,Raw Data Provenance,OII v1 Criteria
+Dependent projects,Project,Build,Package Management,[Proj],Git / Github / Package Managers,
+Depending projects,Project,Build,Package Management,[Proj],Git / Github / Package Managers,
+Platforms available,Project,Build,Compilation Platforms,[Platforms],Make files,
+Public Code Repository,Project,Development,Code,Maybe URL,Home Page,T-TD-COD
+Code Available on Request,Project,Development,Code,Bool,Home Page,T-TD-COR
+Public Issue Tracker,Project,Development,Collaboration,Maybe URL,Home Page,T-TD-TRA
+Activity of Issue Tracker,Project,Development,Collaboration,,,T-TD-ATR
+Issue tracker comments activity,Project,Development,Collaboration,"[(Int, Period)]",Trac / Github / ...,
+Diversity of collaborators,Project,Development,Collaboration,,,
+Issues submitted,Contributor,Development,Contributor Activity,"[(Int, Period)]",Trac / Github / ...,
+Issues commented on,Contributor,Development,Contributor Activity,"[(Int, Period)]",Trac / Github / ...,
+Issues closed,Contributor,Development,Contributor Activity,"[(Int, Period)]",Trac / Github / ...,
+Issues tagged,Contributor,Development,Contributor Activity,"[(Int, Period)]",Trac / Github / ...,
+Tests committed,Contributor,Development,Contributor Activity,"[(Int, Period)]",Trac / Github / ...,
+Developer Documentation committed,Contributor,Development,Contributor Activity,"[(Int, Period)]",Trac / Github / ...,
+Diagram committed,Contributor,Development,Contributor Activity,"[(Int, Period)]",Trac / Github / Wiki ...,
+User Documentation committed,Contributor,Development,Contributor Activity,"[(Int, Period)]",Trac / Github / ...,
+Code committed,Contributor,Development,Contributor Activity,"[(Int, Period)]",Trac / Github / ...,
+Commercial support available,Project,Ecosystem,Service Providers,Bool || [Orgs],Home page,
+Training available,Project,Ecosystem,Service Providers,Bool || [Orgs],Home page,
+Support request cycle time,Project,Development,Support,"[(Duration, Period)]",github / ZenDesk / Get Satisfaction / ...,
+Support request cycle time - Bug,Project,Development,Support,"[(Duration, Period)]",github / ZenDesk / Get Satisfaction / ...,
+Support request cycle time - Feature Request,Project,Development,Support,"[(Duration, Period)]",github / ZenDesk / Get Satisfaction / ...,
+Support request cycle time - Question,Project,Development,Support,"[(Duration, Period)]",github / ZenDesk / Get Satisfaction / ...,
+Other disaggregated support topics (Installation / Configuration / Performance / Security / ...),,,,"[(Duration, Period)]",,
+Code commit frequency,Project,Development,Code,"[(Int, Period)]",Git / ...,
+Code commit size ,Project,Development,Code,"[(Int, Period)]",Git / ...,
+Code diversity,Project,Development,Code,,Git / ...,
+Frontend code size,Project,Development,Code,"[(Int, Period)]",Git / ...,
+Backend code size,Project,Development,Code,"[(Int, Period)]",Git / ...,
+Build/Deployment code size,Project,Development,Code,"[(Int, Period)]",Git / ...,
+Documentation/Comments code size,Project,Development,Code,"[(Int, Period)]",Git / ...,
+Bug cycle time,Project,Development,Code,"[(Duration, Period)]",Trac / Github / ...,
+Bug cycle time - Installation,Project,Development,Code,"[(Duration, Period)]",Trac / Github / ...,
+Bug cycle time - Configuration,Project,Development,Code,"[(Duration, Period)]",Trac / Github / ...,
+Bug cycle time - Performance,Project,Development,Code,"[(Duration, Period)]",Trac / Github / ...,
+Bug cycle time - Security,Project,Development,Code,"[(Duration, Period)]",Trac / Github / ...,
+Other disaggregated bug topics (Installation / Configuration / Performance / Security / ...),,,,"[(Duration, Period)]",Trac / Github / ...,
+Pull requests,Project,Development,Code,"[(Int, Period)]",Git / ...,
+Pull requests cycle time,Project,Development,Code,"[(Duration, Period)]",Git / ...,
+Release Notes URL,Project,Documentation,Release Notes,Maybe URL,,T-TD-BUG
+Release Notes Updates,Project,Documentation,Release Notes,"[(Int, Period)]",,T-TD-BUG
+Roadmap URL,Project,Documentation,Roadmap,Maybe URL,,T-TD-ROA
+Roadmap Updates,Project,Documentation,Roadmap,"[(Int, Period)]",,
+Threat Model URL,Project,Documentation,Specifications,Maybe URL,,
+Threat Model Updates,Project,Documentation,Specifications,"[(Int, Period)]",,
+Required Capabilities,Project,Documentation,Specifications,Platform [Capabilities],,
+Data Model URL,Project,Documentation,Specifications,Maybe URL,,
+Data Model Updates,Project,Documentation,Specifications,"[(Int, Period)]",,
+Library usage documentation URL,Project,Documentation,Usage,Maybe URL,,
+Library usage documentation Updates,Project,Documentation,Usage,"[(Int, Period)]",,
+Open Source License,Project,Legal,License,Maybe URL,,T-PV-OPE
+Open Audit Agreement,Project,Security,Audit,Maybe URL,Home page,T-PV-OAU
+Audit with NDA,Project,Security,Audit,Maybe URL,Home page,T-PV-NDA
+Audit URL,Project,Security,Audit,Maybe URL,Home page / Interviews,T-ER-AUD
+Audit Updates,Project,Security,Audit,"[(Int, Period)]",Home page / Interviews,T-ER-AUD
+Auditor,Project,Security,Audit,[Organisation],,T-ER-AUE
+Automated Audit,Project,Security,Audit,[Organisation],,T-ER-AUA
+Response to Audit,Project,Security,Audit,"[(AuditProblem, Response, Period)]",,T-ER-AUR
+Timely Response to Audit,Project,Security,Audit,,,T-ER-AUT
+Deterministic Build Process,Project,Development,Build process,Bool,,
+Deterministic Build Process Documentation,Project,Development,Build process,Maybe URL,,T-PV-DET
+CVE feed URL,Project,Contribution,Security,,Home Page / CVE Databases,
+CVE cycle time,Project,Contribution,Security,,CVE Databases,
+Crash reports,Project,Runtime,Crash reports,,,
+Service Availability,Service,Availability,,,Remote Probing,
+SSL Implementation,Service,Security,,,Remote Probing,S-SD-TLS
+Terms of Service URL,Service,Terms,,,Home page,T-EP-DOC
+Terms of Service Changes,Service,Terms,,,Home page,
+Notification of changes,Service,Terms,,,Terms of Service,T-EP-NOT
+Transparency Report URL,Service,Transparency,,,,
+Transparency Report Data,Service,Transparency,,,Company Websites,T-EP-TRA / T-EP-JUR
+Policy Breach Reports,Service,Transparency,,,,T-EP-BRE
+No Content Prioritisation,Service,Transparency,Net Neutrality,,,T-NN-PRI
+TOSDR Class,Service,Terms,,DERIVED,Terms of Service,
+User control of Copyright,Service,Terms,Intellectual Property,???,Terms of Service,

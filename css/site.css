@@ -10,6 +10,7 @@ h1, h2, h3, h4, h5, h6, nav a, .links small a, .links small {
 .category {
   font-size: 80%;
 }
+
 h1, .space {
   margin-top: 4rem
 }
@@ -345,4 +346,3 @@ blockquote p {
   .popover-item:first-child .popover-link:hover:after {
     border-bottom-color: #33C3F0; }
 }
-/*# sourceMappingURL=site.css.map */

@@ -1,9 +1,0 @@
-.related
-  h5 Recent Blog Posts
-  ul.related-posts
-    each post in site.posts.slice(0,2)
-      li
-        a(href=site.baseurl+"/blog/" + post.datebasename)= post.title
-        // small= moment(post.date).format("%Y-%m-%j")
-        |  
-        small= post.date
