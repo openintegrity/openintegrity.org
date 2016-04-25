@@ -1,6 +1,236 @@
 <!DOCTYPE html><!--if lt IE 7<html class="ie ie6" lang="en">--><!--if IE 7<html class="ie ie7" lang="en">--><!--if IE 8<html class="ie ie8" lang="en">--><!--if (gte IE 9)|!(IE)<!--><html lang="en"> <!--
 --><html><head><meta charset="utf8"><title>Architecture &middot; Open Integrity</title><meta name="description" content=""><meta name="author" content=""><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><link rel="stylesheet" href="/css/skeleton.css"><link rel="stylesheet" href="/css/site.css"><!--if lt IE 9script(src="http://html5shim.googlecode.com/svn/trunk/html5.js")
---><script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script><script src="/js/anchor.min.js"></script><script src="/js/site.js"></script><link rel="shortcut icon" href="/images/favicon.ico"><link rel="apple-touch-icon" href="/images/apple-touch-icon.png"><link rel="apple-touch-icon" sizes="72x72" href="/images/apple-touch-icon-72x72.png"><link rel="apple-touch-icon" sizes="114x114" href="/images/apple-touch-icon-114x114.png"><link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css"><link href="//fonts.googleapis.com/css?family=Lora:400,300,600" rel="stylesheet" type="text/css"><link rel="alternate" type="application/rss+xml" title="RSS" href="{{ site.baseurl }}/atom.xml"></head><body class="has-docked-nav"><div class="container"><div class="navbar-spacer"></div><nav class="navbar"><div class="container"><ul class="navbar-list"><li class="navbar-item"><a href="" class="navbar-link">Home</a></li><li class="navbar-item"><a href="#" data-popover="#codeNavAbout" class="navbar-link">About</a><div id="codeNavAbout" class="popover"><ul class="popover-list"><li class="popover-item"><a href="/about" class="popover-link">Overview</a></li><li class="popover-item"><a href="/about#team" class="popover-link">Team</a></li><li class="popover-item"><a href="/about#partners" class="popover-link">Partners</a></li><li class="popover-item"><a href="/about#board" class="popover-link">Advisory Board</a></li></ul></div></li><li class="navbar-item"><a href="#" data-popover="#codeNavPopover" class="navbar-link">Approach</a><div id="codeNavPopover" class="popover"><ul class="popover-list"><li class="popover-item"><a href="/framework" class="popover-link">Overview</a></li><li class="popover-item"><a href="/impact" class="popover-link">Impact</a></li><li class="popover-item"><a href="/practices" class="popover-link">Practices</a></li><li class="popover-item"><a href="#" class="popover-link">Metrics (soon)</a></li><li class="popover-item"><a href="#" class="popover-link">Scores (soon)</a></li></ul></div></li><li class="navbar-item"><a href="/blog" class="navbar-link">Blog</a></li><li class="navbar-item"><a href="/join" class="navbar-link">Join</a></li></ul></div></nav><div class="row links"><small><div class="crumb u-pull-left"><a href="">Home</a> / Architecture</div><div class="utilities u-pull-right"><a href="https://code.iilab.org/openintegrity/architecture/edit/staging/index.md">Edit</a> - <a href="https://code.iilab.org/openintegrity/architecture/commits/staging/index.md">Changes</a> - <a href="https://code.iilab.org/openintegrity/architecture/tree/staging/index.md">Source</a></div></small></div><div class="docs-section"><h1 class="docs-header">Architecture</h1>
+--><script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script><script src="/js/anchor.min.js"></script><script src="/js/site.js"></script><link rel="shortcut icon" href="/images/favicon.ico"><link rel="apple-touch-icon" href="/images/apple-touch-icon.png"><link rel="apple-touch-icon" sizes="72x72" href="/images/apple-touch-icon-72x72.png"><link rel="apple-touch-icon" sizes="114x114" href="/images/apple-touch-icon-114x114.png"><link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css"><link href="//fonts.googleapis.com/css?family=Lora:400,300,600" rel="stylesheet" type="text/css"><link rel="alternate" type="application/rss+xml" title="RSS" href="{{ site.baseurl }}/atom.xml"></head><body class="has-docked-nav"><div class="container"><div class="navbar-spacer"></div><nav class="navbar"><div class="container"><ul class="navbar-list"><li class="navbar-item"><a href="" class="navbar-link">Home</a></li><li class="navbar-item"><a href="#" data-popover="#codeNavAbout" class="navbar-link">About</a><div id="codeNavAbout" class="popover"><ul class="popover-list"><li class="popover-item"><a href="/about" class="popover-link">Overview</a></li><li class="popover-item"><a href="/about#team" class="popover-link">Team</a></li><li class="popover-item"><a href="/about#partners" class="popover-link">Partners</a></li><li class="popover-item"><a href="/about#board" class="popover-link">Advisory Board</a></li></ul></div></li><li class="navbar-item"><a href="#" data-popover="#codeNavPopover" class="navbar-link">Approach</a><div id="codeNavPopover" class="popover"><ul class="popover-list"><li class="popover-item"><a href="/framework" class="popover-link">Overview</a></li><li class="popover-item"><a href="/impact" class="popover-link">Impact</a></li><li class="popover-item"><a href="/practices" class="popover-link">Practices</a></li><li class="popover-item"><a href="#" class="popover-link">Metrics (soon)</a></li><li class="popover-item"><a href="#" class="popover-link">Scores (soon)</a></li></ul></div></li><li class="navbar-item"><a href="/blog" class="navbar-link">Blog</a></li><li class="navbar-item"><a href="/join" class="navbar-link">Join</a></li></ul></div></nav><div class="row links"><small><div class="crumb u-pull-left"><a href="">Home</a> / Architecture</div><div class="utilities u-pull-right"><a href="https://code.iilab.org/openintegrity/architecture/edit/staging/index.md">Edit</a> - <a href="https://code.iilab.org/openintegrity/architecture/commits/staging/index.md">Changes</a> - <a href="https://code.iilab.org/openintegrity/architecture/tree/staging/index.md">Source</a></div></small></div><div class="docs-section"><h1 class="docs-header">Architecture</h1><h1 id="oii-technical-approach">OII Technical Approach</h1>
+<blockquote>
+<p>This document is open for comments by interested parties.<br />
+Please <a href="https://code.iilab.org">register first</a> and use the <a href="https://code.iilab.org/openintegrity/architecture/merge_requests/2/diffs?view=inline">code review tool</a> to comment on relevant sections.</p>
+</blockquote>
+<!-- MarkdownTOC depth=5 -->
+<ul>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#components">Components</a>
+<ul>
+<li><a href="#api-gateway">API Gateway</a>
+<ul>
+<li><a href="#purpose">Purpose</a></li>
+<li><a href="#implementation-options-kong-vs-tyk">Implementation Options: Kong vs Tyk</a></li>
+</ul></li>
+<li><a href="#core-data-services">Core Data Services</a>
+<ul>
+<li><a href="#purpose-1">Purpose</a></li>
+<li><a href="#implementation">Implementation</a></li>
+</ul></li>
+<li><a href="#metric-data-store">Metric Data Store</a>
+<ul>
+<li><a href="#purpose-2">Purpose</a></li>
+<li><a href="#implementation-1">Implementation</a></li>
+</ul></li>
+<li><a href="#metric-data-collection-agents">Metric Data Collection Agents</a>
+<ul>
+<li><a href="#purpose-3">Purpose</a></li>
+<li><a href="#development--deployment-guidelines">Development &amp; Deployment Guidelines</a></li>
+<li><a href="#example-approach-librariesio">Example Approach: Libraries.io</a></li>
+<li><a href="#example-approach-tosdr">Example Approach: TOSDR</a></li>
+</ul></li>
+<li><a href="#web-front-end">Web Front End</a>
+<ul>
+<li><a href="#purpose-4">Purpose</a></li>
+<li><a href="#implementation-static-generator-vs-cms-vs-custom-web-app-react">Implementation: Static Generator vs CMS vs Custom Web App (React)</a></li>
+</ul></li>
+</ul></li>
+</ul>
+<!-- /MarkdownTOC -->
+<h2 id="overview">Overview</h2>
+<p><img src="../images/architecture.png" /></p>
+<h2 id="components">Components</h2>
+<h3 id="api-gateway">API Gateway</h3>
+<h4 id="purpose">Purpose</h4>
+<p>An API Gateway has two key functions: it allows for consolidation of separately developed/deployed services under a single API and it also handles cross-cutting concerns for those services (e.g. authentication, access logging, rate limiting…). This allows OII to lower the barrier of entry for data provider partners while also providing a first-class experience for API consumers. Both sets of users would use the API Gateway to obtain access to the API. Partners might also be provided with a way to add their own services (to provide hosted metrics through the OII API, for example).</p>
+<h4 id="implementation-options-kong-vs-tyk">Implementation Options: Kong vs Tyk</h4>
+<p>The top open source API Gateways are <a href="https://getkong.org/">Kong</a> and <a href="https://tyk.io">Tyk</a>. Both provide the core features mentioned above, offer a number of scripted deployment options, and are relatively active projects on Github. To evaluate which one was more appropriate for OII, both were installed in a local dev environment. See the figure below for a comparison of features.</p>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th>Kong</th>
+<th>Tyk</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Ease of deployment</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr class="even">
+<td>API for management</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr class="odd">
+<td>Allows import of API definitions from files</td>
+<td></td>
+<td>✓</td>
+</tr>
+<tr class="even">
+<td>Rate limiting</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr class="odd">
+<td>Request logging</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr class="even">
+<td>API versioning</td>
+<td></td>
+<td>✓</td>
+</tr>
+<tr class="odd">
+<td>Key authentication</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr class="even">
+<td>OAuth2</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr class="odd">
+<td>Custom event handlers</td>
+<td></td>
+<td>✓</td>
+</tr>
+</tbody>
+</table>
+<p>In the end, it was determined that Tyk is a better fit for OII, primarily because of ease of configuration management through imported API definitions, but also because of unique features like API versioning and a more mature developer dashboard..</p>
+<h3 id="core-data-services">Core Data Services</h3>
+<h4 id="purpose-1">Purpose</h4>
+<p>The Core Data Services provide the ability to add, update, and query the projects that are tracked by OII as well as manipulate data through the approval pipeline as necessary. They also allow for basic retrieval and submission of metrics for a given project.</p>
+<h4 id="implementation">Implementation</h4>
+<p>NodeJS is the baseline server technology for OII due to its ease of deployment and scaling, its good performance, the popularity of Javascript, and the availability of frameworks and tools for Node. The Core Data Services will be implemented in Node using Express. Since they will be served through the API Gateway, the services do not need to implement their own authentication or rate limiting. Therefore, a simple project structure such as the one employed here (<a href="https://github.com/developit/express-es6-rest-api" class="uri">https://github.com/developit/express-es6-rest-api</a>) can be used.</p>
+<p>Although an API Gateway would allow for a micro services architecture, the Core Data Services will likely all be a part of one deployable application since they are strongly tied together by data. Persistence will be to MongoDB to allow for a flexible schema and simple scalability.</p>
+<h3 id="metric-data-store">Metric Data Store</h3>
+<h4 id="purpose-2">Purpose</h4>
+<p>While many of the metrics provided by OII are collected from external sources, much of this metric data will need to be stored. One reason is to provide caching for the data so that excessive API calls to external resources are avoided. These external resources may also only make point-in-time data available, and some measures require knowing how this data has changed. Metric sources may also provide data covering several measures or may need to be combined with data from other sources in order to be useful. For all of these reasons, a Metric Data Store is required.</p>
+<h4 id="implementation-1">Implementation</h4>
+<p>Metric data may be highly structured or completely unstructured. It could contain a single value or a large block of text or other data. These requirements narrow the field of potential solutions down to either a document datastore such as MongoDB or a file-based store such as git. While git provides nice functionality such as built-in history and nice interfaces and libraries for accessing it, MongoDB can be considerably faster and is more easily queryable. MongoDB is also easier to work with from code. It does have lower size limits (16 MB per document), but at present that does not appear to be a limiting factor.</p>
+<p>The Metric Data Store can be populated directly by Data Collection Agents deployed by OII or through calls to the Core Data Services in the case of externally-managed agents (or hand-entered through the Web Front End).</p>
+<h3 id="metric-data-collection-agents">Metric Data Collection Agents</h3>
+<h4 id="purpose-3">Purpose</h4>
+<p>One of the biggest technical challenges for OII is the collection of data to develop metrics with. For a given measure, there may be alternate sources for data depending on the type of project being reported on, the platforms supported by the project, and whether the project is open or closed source. There are also varying forms of data, from simple numbers to blocks of text to whole files. Finally, the data collected might be useful on its own, but it may need to be transformed or compared with previous measurements to provide value.</p>
+<p>In order to accelerate development of metrics and allow inclusion of metric which simply could not be collected by the OII team (as well as metrics for which part of the value is in the organization which has collected and verified them), a number of data partnerships are being formed. The technical implications of this are that OII needs a way to both collect data and receive data collected by others. This capability is provided by Metric Data Collection Agents.</p>
+<h4 id="development-deployment-guidelines">Development &amp; Deployment Guidelines</h4>
+<p>Metric Data Collection Agents can be written using whichever language and frameworks are favored by the developer and appropriate for the task. The high-level requirements for these agents are:</p>
+<ul>
+<li>Must be publicly accessible over http/s (may be protected using API keys or a similar authentication scheme)</li>
+<li>Must provide data in the format specified here: &lt;link to json schema?&gt;</li>
+<li>In cases when data is being pushed to the OII API, must use a valid API key</li>
+</ul>
+<p>In addition, considerations should be made for the following:</p>
+<ul>
+<li>Avoid calling third-party APIs any more frequently than necessary</li>
+<li>Avoid deeply nested data structures</li>
+<li>Work with the OII team to ensure that the expected traffic can be handled</li>
+<li>Avoid updating timestamps in returned data if no data has changed</li>
+</ul>
+<h4 id="example-approach-libraries.io">Example Approach: Libraries.io</h4>
+<p>Since <a href="https://libraries.io">Libraries.io</a> offers its own API, there are a couple of different integration options available, depending on the exact metric data needed from it. The first method would be to proxy their API by simply configuring the API Gateway. This works if the data provided through a given metric is relatively unchanged from what Libraries.io provides. The API Gateway allows for simple structural changes to returned JSON.</p>
+<p>The second method for integration is to create a Collection Agent. This agent would query <a href="https://libraries.io">Libraries.io</a> at a predetermined frequency and store the results in OII’s data store for later retrieval. This method would be more appropriate if several different metrics are all derived from the same source. In this case, an agent can drastically reduce the amount of API calls necessary to get the data from Libraries.io.</p>
+<h4 id="example-approach-tosdr">Example Approach: TOSDR</h4>
+<p><a href="https://tosdr.org">TOSDR</a> data would also be a candidate for proxying through the API Gateway. However, other options are also available if it is desirable to extract certain pieces of data from the results. Since TOSDR stores data in Github, it is easily retrievable through either direct file urls or the Github API. The API could be particularly useful in this case, since polling could be done on the API call to get commit information. When a new commit is detected, only the affected files would need to be re-fetched.</p>
+<h3 id="web-front-end">Web Front End</h3>
+<h4 id="purpose-4">Purpose</h4>
+<p>The web front end is the face of OII and allows a user to interact with the API without any programming knowledge. This site has two goals<br />
+— to make data on tracked projects available for viewing and to educate users on how the data is collected and how it might be interpreted.</p>
+<h4 id="implementation-static-generator-vs-cms-vs-custom-web-app-react">Implementation: Static Generator vs CMS vs Custom Web App (React)</h4>
+<p>Three potential implementations of the front end were considered: static site generation using Content As Code (<a href="http://iilab.github.io/contentascode/" class="uri">http://iilab.github.io/contentascode/</a>), an off the shelf CMS, and a fully custom web app. All have advantages and drawbacks. The table below summarizes these pros and cons in the context of the requirements for the OII front end.</p>
+<table>
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 29%" />
+<col style="width: 24%" />
+<col style="width: 30%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Static Site Generator (Content As Code)</th>
+<th>CMS (e.g. Drupal)</th>
+<th>Custom Web App (React)</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Maintenance of existing functionality</td>
+<td>⭑⭑⭑ Once it’s deployed, it’s fairly maintenance free</td>
+<td>⭑ Security and compatibility updates are common and necessary</td>
+<td>⭑⭑ Can be built with minimal developer-maintained dependencies</td>
+</tr>
+<tr class="even">
+<td>Creation of new functionality</td>
+<td>⭑ Focus is on text-based content</td>
+<td>⭑⭑ Plugins may be created but are limited by the platform</td>
+<td>⭑⭑⭑ Free reign to expand the app</td>
+</tr>
+<tr class="odd">
+<td>Ease of deployment</td>
+<td>⭑⭑⭑</td>
+<td>⭑</td>
+<td>⭑⭑</td>
+</tr>
+<tr class="even">
+<td>Text content creation flexibility</td>
+<td>⭑⭑⭑ Content can easily be divided and expanded in whichever way is seen fit</td>
+<td>⭑⭑⭑</td>
+<td>⭑ Content form is limited by the structure of the web app.</td>
+</tr>
+<tr class="odd">
+<td>Content creation ease of use</td>
+<td>⭑⭑⭑ Prose-based editor is simple and distraction free</td>
+<td>⭑⭑ The CMS must be learned before use</td>
+<td>⭑</td>
+</tr>
+<tr class="even">
+<td>Content editing workflow</td>
+<td>⭑⭑</td>
+<td>⭑⭑⭑</td>
+<td>⭑</td>
+</tr>
+<tr class="odd">
+<td>Dynamic content loading</td>
+<td>⭑</td>
+<td>⭑</td>
+<td>⭑⭑⭑ Progressive loading of content is simple in a web app</td>
+</tr>
+<tr class="even">
+<td>Advanced visualizations</td>
+<td>⭑</td>
+<td>⭑</td>
+<td>⭑⭑⭑ Structured content is easy to work with and can be backed by an API or db</td>
+</tr>
+<tr class="odd">
+<td>Search</td>
+<td>⭑⭑</td>
+<td>⭑⭑</td>
+<td>⭑⭑⭑</td>
+</tr>
+<tr class="even">
+<td>Ease of template editing</td>
+<td>⭑⭑</td>
+<td>⭑</td>
+<td>⭑⭑⭑</td>
+</tr>
+<tr class="odd">
+<td>Data summarization/calculations</td>
+<td>⭑</td>
+<td>⭑</td>
+<td>⭑⭑⭑</td>
+</tr>
+</tbody>
+</table>
+<p>Since the site has two distinct parts with drastically different content and editing workflows and levels of interactivity, a hybrid approach is used to build it. For the list of projects, search, and the viewing of metrics, rendering is done through a React web app. This allows data to easily be pulled into the site through the API either for partial page renders or full server side renders (for search engine visibility). For supporting content that explains the mission of OII, what each metric means, and methodology for collecting and interpreting data, Content As Code will be used.</p>
 </div></div></body><hr><div class="section get-help"><div class="container"><h3 class="section-heading">Want to join the initiative?</h3><p class="section-description">Open Integrity needs your help to provide the best and most up to date information. Get in touch to join the initiative !</p><a href="mailto:contact@openintegrity.org" class="button button-primary">Get in touch</a></div></div><div class="section categories"><div class="container"><div class="row"><div class="two columns">&nbsp;</div><div class="eight column category"><h4>Developed with ❤ by</h4><a href="https://iilab.org"><img src="/images/iilab_white.svg" class="u-max-full-width"></a><h5>Information Innovation Lab</h5><p>Applied research and development of public interest technology.</p></div><div class="two columns">&nbsp;</div></div></div></div><script>$( document ).ready(function() {
   anchors.options.placement = 'left';
   anchors.add('h1,h2,h3');
