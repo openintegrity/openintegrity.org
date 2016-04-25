@@ -4,13 +4,37 @@
  <title>Open Integrity</title>
  <link href="http://openintegrity.github.io/openintegrity.org/atom.xml" rel="self"/>
  <link href="http://openintegrity.github.io/openintegrity.org/"/>
- <updated>Sun, 24 Apr 2016 19:57:04 +0200</updated>
+ <updated>Mon, 25 Apr 2016 11:56:38 +0200</updated>
  <id>http://openintegrity.github.io</id>
  <author>
    <name>Jun Matsushita</name>
    <email></email>
  </author>
 
+ <entry>
+   <title>Impact Workshop at the IFF in Valencia</title>
+   <link href="http://openintegrity.github.io/openintegrity.org/blog/2016-03-08-internet-freedom-festival.md"/>
+   <updated>Tue, 08 Mar 2016 01:00:00 +0100</updated>
+   <id>http://openintegrity.github.io/openintegrity.org</id>
+   <content type="html">
+Activists and technologists came together last month at the Internet Freedom Festival in Valencia, Spain. The Open Integrity Initiative (OII) team joined hundreds of like minded participants in discussing how to keep the Internet open and uncensored for a week of multidisciplinary collaboration.
+
+&lt;!--more--&gt;
+
+Our team held a workshop on Saturday the 5th March where participants contributed their thoughts and experiences about the type of issues faced by at-risk users such as activists, human rights defenders or journalists. We explored how weak and strong spots in software played a role in user security and privacy. What we learned contribute to the Open Integrity Initiative’s software assessment metrics. 
+
+&lt;iframe src&#x3D;&quot;https://docs.google.com/presentation/d/1sDApfSQ-1EnJbRcfJPxy0JBGjhkM06bjrkDuld7cdko/embed?start&#x3D;false&amp;amp;loop&#x3D;false&amp;amp;delayms&#x3D;3000&quot; frameborder&#x3D;&quot;0&quot; width&#x3D;&quot;640&quot; height&#x3D;&quot;480&quot; allowfullscreen&#x3D;&quot;true&quot; mozallowfullscreen&#x3D;&quot;true&quot; webkitallowfullscreen&#x3D;&quot;true&quot;&gt;&lt;/iframe&gt;
+
+After a quick presentation to introduce the project, the participants shared impact stories on software practices which can put the end-users at risk or help reduce it. They drew on hypothetical scenarios or real situations which helped highlight specific issues or good practices in a variety of contexts.
+
+We&#x27;ve collected these stories as part of our impact framework and will make [them available in the impact section of our site](../../impact) where you will be able to further contribute to them.
+
+Some interesting impact stories that emerged were for instance related to the hacking of a Google account made possible because the user was kept logged in during 30 days (even though two-factor authentication is activated). Another participants shared that Tibetan dissidents where affected by malware that benefited from Baidu Browser&#x27;s lack of secured and verified update mechanism. 
+
+This brainstorming session benefited from the variety of backgrounds and experience of the participants and helped shaped our thinking around how to link the software assessment metrics to real world and documented impact stories. 
+
+If you would like to know more about the workshop, you can access the IFF presentation. If you want to share your own impact stories related to a tool or software, feel free to drop us an email or tweet at @openintegrity.</content>
+ </entry>
  <entry>
    <title>Booting up the Open Integrity Index</title>
    <link href="http://openintegrity.github.io/openintegrity.org/blog/2016-03-01-booting-up.md"/>
@@ -36,30 +60,6 @@ Data about the adoption of security and privacy best practices are often difficu
 
 This is what we&#x27;re setting out to answer. In the next 6 months we&#x27;ll focus on [developing partnerships](../../partners#measurement) in order to **define metrics and collect data** that will be available for an audience of professionals (software engineers, trainers, advocacy organizations) and will help provide answers about best practices adoption.
 </content>
- </entry>
- <entry>
-   <title>Impact Workshop at the IFF in Valencia</title>
-   <link href="http://openintegrity.github.io/openintegrity.org/blog/2016-03-08-internet-freedom-festival.md"/>
-   <updated>Tue, 08 Mar 2016 01:00:00 +0100</updated>
-   <id>http://openintegrity.github.io/openintegrity.org</id>
-   <content type="html">
-Activists and technologists came together last month at the Internet Freedom Festival in Valencia, Spain. The Open Integrity Initiative (OII) team joined hundreds of like minded participants in discussing how to keep the Internet open and uncensored for a week of multidisciplinary collaboration.
-
-&lt;!--more--&gt;
-
-Our team held a workshop on Saturday the 5th March where participants contributed their thoughts and experiences about the type of issues faced by at-risk users such as activists, human rights defenders or journalists. We explored how weak and strong spots in software played a role in user security and privacy. What we learned contribute to the Open Integrity Initiative’s software assessment metrics. 
-
-&lt;iframe src&#x3D;&quot;https://docs.google.com/presentation/d/1sDApfSQ-1EnJbRcfJPxy0JBGjhkM06bjrkDuld7cdko/embed?start&#x3D;false&amp;amp;loop&#x3D;false&amp;amp;delayms&#x3D;3000&quot; frameborder&#x3D;&quot;0&quot; width&#x3D;&quot;640&quot; height&#x3D;&quot;480&quot; allowfullscreen&#x3D;&quot;true&quot; mozallowfullscreen&#x3D;&quot;true&quot; webkitallowfullscreen&#x3D;&quot;true&quot;&gt;&lt;/iframe&gt;
-
-After a quick presentation to introduce the project, the participants shared impact stories on software practices which can put the end-users at risk or help reduce it. They drew on hypothetical scenarios or real situations which helped highlight specific issues or good practices in a variety of contexts.
-
-We&#x27;ve collected these stories as part of our impact framework and will make [them available in the impact section of our site](../../impact) where you will be able to further contribute to them.
-
-Some interesting impact stories that emerged were for instance related to the hacking of a Google account made possible because the user was kept logged in during 30 days (even though two-factor authentication is activated). Another participants shared that Tibetan dissidents where affected by malware that benefited from Baidu Browser&#x27;s lack of secured and verified update mechanism. 
-
-This brainstorming session benefited from the variety of backgrounds and experience of the participants and helped shaped our thinking around how to link the software assessment metrics to real world and documented impact stories. 
-
-If you would like to know more about the workshop, you can access the IFF presentation. If you want to share your own impact stories related to a tool or software, feel free to drop us an email or tweet at @openintegrity.</content>
  </entry>
 
 </feed>
