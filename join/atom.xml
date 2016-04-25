@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>Open Integrity</title>
- <link href="http://openintegrity.github.io/openintegrity.org/atom.xml" rel="self"/>
- <link href="http://openintegrity.github.io/openintegrity.org/"/>
- <updated>Mon, 25 Apr 2016 16:31:45 +0000</updated>
- <id>http://openintegrity.github.io</id>
+ <link href="http://staging.openintegrity.org/atom.xml" rel="self"/>
+ <link href="http://staging.openintegrity.org/"/>
+ <updated>Mon, 25 Apr 2016 17:27:27 +0000</updated>
+ <id>http://staging.openintegrity.org</id>
  <author>
    <name>Jun Matsushita</name>
    <email></email>
@@ -13,9 +13,9 @@
 
  <entry>
    <title>Impact Workshop at the IFF in Valencia</title>
-   <link href="http://openintegrity.github.io/openintegrity.org/blog/2016-03-08-internet-freedom-festival.md"/>
+   <link href="http://staging.openintegrity.org/blog/2016-03-08-internet-freedom-festival.md"/>
    <updated>Tue, 08 Mar 2016 00:00:00 +0000</updated>
-   <id>http://openintegrity.github.io/openintegrity.org</id>
+   <id>http://staging.openintegrity.org</id>
    <content type="html">
 Activists and technologists came together last month at the Internet Freedom Festival in Valencia, Spain. The Open Integrity Initiative (OII) team joined hundreds of like minded participants in discussing how to keep the Internet open and uncensored for a week of multidisciplinary collaboration.
 
@@ -37,9 +37,9 @@ If you would like to know more about the workshop, you can access the IFF presen
  </entry>
  <entry>
    <title>Booting up the Open Integrity Index</title>
-   <link href="http://openintegrity.github.io/openintegrity.org/blog/2016-03-01-booting-up.md"/>
+   <link href="http://staging.openintegrity.org/blog/2016-03-01-booting-up.md"/>
    <updated>Tue, 01 Mar 2016 00:00:00 +0000</updated>
-   <id>http://openintegrity.github.io/openintegrity.org</id>
+   <id>http://staging.openintegrity.org</id>
    <content type="html">
 If you&#x27;ve been following the Open Integrity, you will have noticed that after [our initial efforts in 2013](https://wiki.openintegrity.org/doku.php?id&#x3D;workplan), the project has been on hold. During this first phase, we developed the foundations for [our criteria](https://wiki.openintegrity.org/doku.php?id&#x3D;criteria_subcriteria_claim) and setup [a beta platform](https://openintegrity.org/v1). We now advance with [new funders](../../about#funding-partners) to develop the next step of the project with us.
 
