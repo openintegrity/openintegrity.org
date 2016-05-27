@@ -1,0 +1,76 @@
+<!DOCTYPE html><!--if lt IE 7<html class="ie ie6" lang="en">--><!--if IE 7<html class="ie ie7" lang="en">--><!--if IE 8<html class="ie ie8" lang="en">--><!--if (gte IE 9)|!(IE)<!--><html lang="en"> <!--
+--><html><head><meta charset="utf8"><title> &middot; Open Integrity</title><meta name="description" content=""><meta name="author" content=""><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><link rel="stylesheet" href="/css/skeleton.css"><link rel="stylesheet" href="/css/site.css"><!--if lt IE 9script(src="http://html5shim.googlecode.com/svn/trunk/html5.js")
+--><script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script><script src="/js/anchor.min.js"></script><script src="/js/site.js"></script><link rel="shortcut icon" href="/images/favicon.ico"><link rel="apple-touch-icon" href="/images/apple-touch-icon.png"><link rel="apple-touch-icon" sizes="72x72" href="/images/apple-touch-icon-72x72.png"><link rel="apple-touch-icon" sizes="114x114" href="/images/apple-touch-icon-114x114.png"><link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css"><link href="//fonts.googleapis.com/css?family=Lora:400,300,600" rel="stylesheet" type="text/css"><link rel="alternate" type="application/rss+xml" title="RSS" href="{{ site.baseurl }}/atom.xml"></head><body class="has-docked-nav"><div class="container"><div class="navbar-spacer"></div><nav class="navbar"><div class="container"><ul class="navbar-list"><li class="navbar-item"><a href="/" class="navbar-link">Home</a></li><li class="navbar-item"><a href="#" data-popover="#codeNavAbout" class="navbar-link">About</a><div id="codeNavAbout" class="popover"><ul class="popover-list"><li class="popover-item"><a href="/about" class="popover-link">Overview</a></li><li class="popover-item"><a href="/about#partners" class="popover-link">Partners</a></li></ul></div></li><li class="navbar-item"><a href="#" data-popover="#codeNavPopover" class="navbar-link">Approach</a><div id="codeNavPopover" class="popover"><ul class="popover-list"><li class="popover-item"><a href="/framework" class="popover-link">Overview</a></li><li class="popover-item"><a href="/impact" class="popover-link">Impact</a></li><li class="popover-item"><a href="/practices" class="popover-link">Practices</a></li><li class="popover-item"><a href="#" class="popover-link">Metrics (soon)</a></li><li class="popover-item"><a href="#" class="popover-link">Scores (soon)</a></li></ul></div></li><li class="navbar-item"><a href="/blog" class="navbar-link">Blog</a></li><li class="navbar-item"><a href="/join" class="navbar-link">Join</a></li></ul></div></nav><div class="row links"><small><div class="crumb u-pull-left"><a href="">Home</a> / <a href="/schema/">Schema</a>  / Contributing</div><div class="utilities u-pull-right"><a href="https://code.iilab.org/openintegrity/schema/edit/master/CONTRIBUTING.md">Edit</a> - <a href="https://code.iilab.org/openintegrity/schema/commits/master/CONTRIBUTING.md">Changes</a> - <a href="https://code.iilab.org/openintegrity/schema/tree/master/CONTRIBUTING.md">Source</a></div></small></div><div class="docs-section"><div class="space"> </div><p>We transcribe document schemas in a markdown-compatible shorthand called MSON which gets turned into JSON Schema.<br />
+The MSON goes in an API Blueprint Data Structures section as described <a href="https://github.com/apiaryio/api-blueprint/blob/master/API%20Blueprint%20Specification.md#def-data-structures">here</a>.<br />
+<code>Drafter</code> is Apiary's tool for parsing API Blueprint files, and they include a python script in the repo to parse the JSON Schema from the output.<br />
+For example:</p>
+<pre><code>landers@tp2:~/OII/drafter$ ./bin/drafter -f json signal-android.md | ./tools/refract-filter.py -j
+
+OK.
+{
+  &quot;id&quot;: &quot;app-1&quot;,
+  &quot;name&quot;: &quot;Signal Android&quot;,
+  &quot;type&quot;: &quot;source-repository&quot;,
+  &quot;vcs-url&quot;: &quot;https://github.com/WhisperSystems/Signal-Android.git&quot;,
+  &quot;manifests&quot;: [
+    &quot;`manifest-type`: maven&quot;,
+    &quot;deps: lib1 lib2&quot;,
+    &quot;`manifest-type`: gradle&quot;,
+    &quot;deps: libx liby&quot;
+  ],
+  &quot;build-artifacts&quot;: [
+    &quot;name: `signal-android-phone`&quot;,
+    &quot;type: native&quot;
+  ],
+  &quot;os-families&quot;: &quot;android&quot;,
+  &quot;os-versions&quot;: &quot;android-kitkat&quot;,
+  &quot;infra-deps&quot;: [
+    &quot;internet-infra&quot;,
+    &quot;signal-backend-servers&quot;
+  ]
+}
+{
+  &quot;$schema&quot;: &quot;http://json-schema.org/draft-04/schema#&quot;,
+  &quot;type&quot;: &quot;object&quot;,
+  &quot;properties&quot;: {
+    &quot;id&quot;: {
+      &quot;type&quot;: &quot;string&quot;
+    },
+    &quot;name&quot;: {
+      &quot;type&quot;: &quot;string&quot;
+    },
+    &quot;type&quot;: {
+      &quot;type&quot;: &quot;string&quot;
+    },
+    &quot;vcs-url&quot;: {
+      &quot;type&quot;: &quot;string&quot;
+    },
+    &quot;manifests&quot;: {
+      &quot;type&quot;: &quot;array&quot;
+    },
+    &quot;build-artifacts&quot;: {
+      &quot;type&quot;: &quot;array&quot;
+    },
+    &quot;os-families&quot;: {
+      &quot;type&quot;: &quot;string&quot;
+    },
+    &quot;os-versions&quot;: {
+      &quot;type&quot;: &quot;string&quot;
+    },
+    &quot;infra-deps&quot;: {
+      &quot;type&quot;: &quot;array&quot;
+    }
+  },
+  &quot;required&quot;: [
+    &quot;id&quot;,
+    &quot;name&quot;,
+    &quot;type&quot;
+  ]
+}</code></pre>
+<p>So that we can make use of this output, I've adjusted the aforementioned python script (source here: <a href="https://github.com/joelanders/drafter" class="uri">https://github.com/joelanders/drafter</a>) so that we can pull out JSON <em>or</em> the JSON Schema.<br />
+The hercule -&gt; drafter -&gt; python-script pipeline is still a bit cumbersome to install, so our .gitlab-ci.yml file runs two scripts in the conext of a Docker container<br />
+(<a href="https://hub.docker.com/r/joeoi/mson-to-json-schema/" class="uri">https://hub.docker.com/r/joeoi/mson-to-json-schema/</a>): <code>mson-to-json-schema.sh</code> builds the JSON Schema and <code>commit-json-schema.sh</code> commits the results back onto the current branch.</p>
+</div></div></body><hr><div class="section get-help"><div class="container"><h3 class="section-heading">Want to join the initiative?</h3><p class="section-description">Join us in providing information about software practices.<br>Get in touch to join the initiative !</p><a href="mailto:contact@openintegrity.org" class="button button-primary">Get in touch</a></div></div><div class="section categories"><div class="container"><div class="row"><div class="two columns">&nbsp;</div><div class="eight column category"><h4>Developed with ❤ by</h4><a href="https://iilab.org"><img src="/images/iilab_white.svg" class="u-max-full-width"></a><h5>Information Innovation Lab</h5><p>Applied research and development for public interest technology.</p></div><div class="two columns">&nbsp;</div></div></div></div><script>$( document ).ready(function() {
+  anchors.options.placement = 'left';
+  anchors.add('h1,h2,h3');
+})</script></html>

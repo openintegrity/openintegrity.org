@@ -11,6 +11,27 @@ h1, h2, h3, h4, h5, h6, nav a, .links small a, .links small {
   font-size: 80%;
 }
 
+dl {
+  border: 2px double antiquewhite;
+  padding: 2rem;
+  margin: 4rem 0 1rem;
+  background-color: ghostwhite;
+}
+dt {
+  float: left;
+  clear: left;
+  width: 100px;
+  text-align: right;
+  font-weight: bold;
+}
+dt:after {
+  content: ":";
+}
+dd {
+  margin: 0 0 0 110px;
+  padding: 0 0 0.5em 0;
+}
+
 h1, .space {
   margin-top: 4rem
 }
@@ -92,7 +113,7 @@ blockquote p {
   background-size: cover;
   color: #fff;
 }
-.categories .section-description { 
+.categories .section-description {
   margin-bottom: 4rem;
 }
 /* Bigger than 550 */
@@ -110,7 +131,7 @@ blockquote p {
 /* Bigger than 750 */
 @media (min-width: 750px) {
   .section {
-    padding: 14rem 0 15rem;
+    padding: 10rem 0 9rem;
   }
   .section-description {
     max-width: 60%;
@@ -118,14 +139,14 @@ blockquote p {
     margin-right: auto;
   }
   .categories {
-    padding: 15rem 0 8rem;
+    padding: 10rem 0 9rem;
   }
 }
 
 /* Bigger than 1000 */
 @media (min-width: 1000px) {
   .section {
-    padding: 20rem 0 19rem;
+    padding: 10rem 0 9rem;
   }
 }
 /* Default Skeleton CSS
@@ -183,7 +204,7 @@ blockquote p {
   white-space: pre;
   word-wrap: break-word }
 .example {
-  position: relative; 
+  position: relative;
   margin-top: 4rem; }
 .example-header {
   font-weight: 600;
@@ -215,7 +236,7 @@ blockquote p {
 /* Larger than phone */
 @media (min-width: 550px) {
   .header {
-    margin-top: 9rem; 
+    margin-top: 9rem;
     margin-bottom: 6rem; }
   .value-props {
     margin-top: 9rem;
@@ -295,7 +316,7 @@ blockquote p {
     -webkit-filter: drop-shadow(0 0 6px rgba(0,0,0,.1));
        -moz-filter: drop-shadow(0 0 6px rgba(0,0,0,.1));
             filter: drop-shadow(0 0 6px rgba(0,0,0,.1)); }
-  .popover-item:first-child .popover-link:after, 
+  .popover-item:first-child .popover-link:after,
   .popover-item:first-child .popover-link:before {
     bottom: 100%;
     left: 50%;
