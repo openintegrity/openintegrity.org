@@ -101,6 +101,37 @@ p img {
 .nav-link.active {
   color: #33C3F0; }
 
+.navbar-brand {
+  float: none;
+  text-align: center;
+  margin-right: 0;
+}
+.navbar-nav .nav-item {
+  float: none;
+  text-align: center;
+  margin-right: 0;
+}
+.navbar-divider,
+.navbar-nav .nav-item+.nav-item,
+.navbar-nav .nav-link + .nav-link {
+  margin-left: 0;
+  text-align: center;
+  margin-right: 0;
+}
+@media (min-width: 768px) {
+  .navbar-brand {
+    float: left;
+  }
+  .navbar-nav .nav-item {
+    float: left;
+  }
+  .navbar-divider,
+  .navbar-nav .nav-item + .nav-item,
+  .navbar-nav .nav-link + .nav-link {
+    margin-left: 1rem;
+  }
+}
+
 /* Shared
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .button.button-primary {
@@ -161,7 +192,7 @@ blockquote p {
 }
 
 /* Bigger than 750 */
-@media (min-width: 750px) {
+@media (min-width: 768px) {
   .section {
     padding: 10rem 0 9rem;
   }
