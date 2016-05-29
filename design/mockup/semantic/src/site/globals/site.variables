@@ -1,8 +1,0 @@
-/*******************************
-     User Global Variables
-*******************************/
-
-@fontName       : 'Raleway';
-@primaryColor   : #f9f9fe;
-@secondaryColor : @grey;
-

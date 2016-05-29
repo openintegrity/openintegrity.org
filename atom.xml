@@ -4,7 +4,7 @@
  <title>Open Integrity</title>
  <link href="http://openintegrity.github.io/atom.xml" rel="self"/>
  <link href="http://openintegrity.github.io/"/>
- <updated>Sat, 28 May 2016 21:19:10 +0200</updated>
+ <updated>Sun, 29 May 2016 11:38:01 +0000</updated>
  <id>http://openintegrity.github.io</id>
  <author>
    <name>Jun Matsushita</name>
@@ -14,7 +14,7 @@
  <entry>
    <title>Impact Workshop at the IFF in Valencia</title>
    <link href="http://openintegrity.github.io/blog/2016-03-08-internet-freedom-festival.md"/>
-   <updated>Tue, 08 Mar 2016 01:00:00 +0100</updated>
+   <updated>Tue, 08 Mar 2016 00:00:00 +0000</updated>
    <id>http://openintegrity.github.io</id>
    <content type="html">
 Activists and technologists came together last month at the Internet Freedom Festival in Valencia, Spain. The Open Integrity Initiative (OII) team joined hundreds of like minded participants in discussing how to keep the Internet open and uncensored for a week of multidisciplinary collaboration.
@@ -38,7 +38,7 @@ If you would like to know more about the workshop, you can access the IFF presen
  <entry>
    <title>Booting up the Open Integrity Index</title>
    <link href="http://openintegrity.github.io/blog/2016-03-01-booting-up.md"/>
-   <updated>Tue, 01 Mar 2016 01:00:00 +0100</updated>
+   <updated>Tue, 01 Mar 2016 00:00:00 +0000</updated>
    <id>http://openintegrity.github.io</id>
    <content type="html">
 If you&#x27;ve been following the Open Integrity, you will have noticed that after [our initial efforts in 2013](https://wiki.openintegrity.org/doku.php?id&#x3D;workplan), the project has been on hold. During this first phase, we developed the foundations for [our criteria](https://wiki.openintegrity.org/doku.php?id&#x3D;criteria_subcriteria_claim) and setup [a beta platform](https://openintegrity.org/v1). We now advance with [new funders](../../about#funding-partners) to develop the next step of the project with us.
