@@ -4,7 +4,7 @@
  <title>Open Integrity</title>
  <link href="http://openintegrity.github.io/atom.xml" rel="self"/>
  <link href="http://openintegrity.github.io/"/>
- <updated>Sun, 29 May 2016 13:33:36 +0000</updated>
+ <updated>Sun, 29 May 2016 16:37:04 +0200</updated>
  <id>http://openintegrity.github.io</id>
  <author>
    <name>Jun Matsushita</name>
@@ -12,9 +12,35 @@
  </author>
 
  <entry>
+   <title>Booting up Open Integrity</title>
+   <link href="http://openintegrity.github.io/blog/2016-03-01-booting-up.md"/>
+   <updated>Tue, 01 Mar 2016 01:00:00 +0100</updated>
+   <id>http://openintegrity.github.io</id>
+   <content type="html">
+If you&#x27;ve been following the Open Integrity Index, you will have noticed that after [our initial efforts in 2013](https://wiki.openintegrity.org/doku.php?id&#x3D;workplan), the project has been on hold. During this first phase, we developed the foundations for [our criteria](https://wiki.openintegrity.org/doku.php?id&#x3D;criteria_subcriteria_claim) and setup [a beta platform](https://openintegrity.org/v1). We now advance with [new funders](../../about#funding-partners) to develop the next step of the project with us.
+
+&lt;!--more--&gt;
+
+In this first phase we set the tone of the initiative and the values that we adhere to:
+ - **We care about the impact of technology on all users** and particularly those who depend on it to enjoy their fundamental rights.
+ - **We take a holistic approach to understanding the impact of technology** which includes the technical features tools make available, but also their usability and the governance and policies of the tool makers.
+ - **We believe that security by transparency** is the way to go, yet we know that there are also best practices to follow with closed source software that make a difference for users.
+
+**Open Integrity Initiative** has assembled a list of a hundred possible metrics related to various aspects of software development, including governance, systems, architecture, build and user experience. In this [new phase](../../about#funding) we will shift our focus towards the **gathering of measurement and claims** and the **development of a knowledge framework** about the adoption of best practices that support the security and privacy of software.
+
+Data about the adoption of security and privacy best practices are often difficult to find and rarely easy for users to understand. How can the adoption of these practices be measured, and what is the most useful structure for such a broad range of measurements? How can we answer **reliably and consistently** questions such as:
+- Which tools are **open-source**?
+- Which tools provide **end-to-end encryption**, implement **forward secrecy** or support **two-factor authentication**?
+- Which have security features that are **usable without prior expertise or training**?
+- Which can be **downloaded securely and verified** to be authentic?
+
+This is what we&#x27;re setting out to answer. In the next 6 months we&#x27;ll focus on [developing partnerships](../../partners#measurement) in order to **define metrics and collect data** that will be available for an audience of professionals (software engineers, trainers, advocacy organizations) and will help provide answers about best practices adoption.
+</content>
+ </entry>
+ <entry>
    <title>Impact Workshop at the IFF in Valencia</title>
    <link href="http://openintegrity.github.io/blog/2016-03-08-internet-freedom-festival.md"/>
-   <updated>Tue, 08 Mar 2016 00:00:00 +0000</updated>
+   <updated>Tue, 08 Mar 2016 01:00:00 +0100</updated>
    <id>http://openintegrity.github.io</id>
    <content type="html">
 Activists and technologists came together last month at the Internet Freedom Festival in Valencia, Spain. The Open Integrity Initiative (OII) team joined hundreds of like minded participants in discussing how to keep the Internet open and uncensored for a week of multidisciplinary collaboration.
@@ -34,32 +60,6 @@ Some interesting impact stories that emerged were for instance related to the ha
 This brainstorming session benefited from the variety of backgrounds and experience of the participants and helped shaped our thinking around how to link the software assessment metrics to real world and documented impact stories. 
 
 If you would like to know more about the workshop, you can access the IFF presentation. If you want to share your own impact stories related to a tool or software, feel free to drop us an email or tweet at @openintegrity.</content>
- </entry>
- <entry>
-   <title>Booting up the Open Integrity Index</title>
-   <link href="http://openintegrity.github.io/blog/2016-03-01-booting-up.md"/>
-   <updated>Tue, 01 Mar 2016 00:00:00 +0000</updated>
-   <id>http://openintegrity.github.io</id>
-   <content type="html">
-If you&#x27;ve been following the Open Integrity, you will have noticed that after [our initial efforts in 2013](https://wiki.openintegrity.org/doku.php?id&#x3D;workplan), the project has been on hold. During this first phase, we developed the foundations for [our criteria](https://wiki.openintegrity.org/doku.php?id&#x3D;criteria_subcriteria_claim) and setup [a beta platform](https://openintegrity.org/v1). We now advance with [new funders](../../about#funding-partners) to develop the next step of the project with us.
-
-&lt;!--more--&gt;
-
-In this first phase we set the tone of the initiative and the values that we adhere to:
- - **We care about the impact of technology on all users** and particularly those who depend on it to enjoy their fundamental rights.
- - **We take a holistic approach to understanding the impact of technology** which includes the technical features tools make available, but also their usability and the governance and policies of the tool makers.
- - **We believe that security by transparency** is the way to go, yet we know that there are also best practices to follow with closed source software that make a difference for users.
-
-**Open Integrity Initiative** has assembled a list of a hundred possible metrics related to various aspects of software development, including governance, systems, architecture, build and user experience. In this [new phase](../../about#funding) we will shift our focus towards the **gathering of measurement and claims** and the **development of a knowledge framework** about the adoption of best practices that support the security and privacy of software.
-
-Data about the adoption of security and privacy best practices are often difficult to find and rarely easy for users to understand. How can the adoption of these practices be measured, and what is the most useful structure for such a broad range of measurements? How can we answer **reliably and consistently** questions such as:
-- Which tools are **open-source**?
-- Which tools provide **end-to-end encryption**, implement **forward secrecy** or support **two-factor authentication**?
-- Which have security features that are **usable without prior expertise or training**?
-- Which can be **downloaded securely and verified** to be authentic?
-
-This is what we&#x27;re setting out to answer. In the next 6 months we&#x27;ll focus on [developing partnerships](../../partners#measurement) in order to **define metrics and collect data** that will be available for an audience of professionals (software engineers, trainers, advocacy organizations) and will help provide answers about best practices adoption.
-</content>
  </entry>
 
 </feed>
