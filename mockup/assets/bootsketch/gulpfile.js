@@ -32,7 +32,7 @@ gulp.task('vendors', function() {
       'assets/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/transition.js'
     ])
     .pipe(concat('vendors.min.js'))
-    .pipe(uglify())
+//    .pipe(uglify())
     .pipe(gulp.dest('build/js'));
 });
 
