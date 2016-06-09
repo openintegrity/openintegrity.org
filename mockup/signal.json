@@ -1,0 +1,150 @@
+{
+  "tree": {
+    "name": "Signal",
+    "layer": 0,
+    "column": 2,
+    "group": 0,
+    "children": [
+      {
+        "name": "Signal Android",
+        "layer": 1,
+        "column": 2,
+        "group": 1,
+        "children": [
+            {
+              "name": "Android Dep1",
+              "layer": 1,
+              "column": 3,
+              "group": 2
+            },
+            {
+              "name": "Android Dep2",
+              "layer": 1,
+              "column": 3,
+              "group": 2
+            },
+            {
+              "name": "Android",
+              "layer": 2,
+              "column": 2,
+              "group": 5,
+              "children": [
+                {
+                  "name": "Lollypop",
+                  "layer": 2,
+                  "column": 3,
+                  "group": 6
+                },
+                {
+                  "name": "Kitkat",
+                  "layer": 2,
+                  "column": 3,
+                  "group": 6
+                },
+                {
+                  "name": "Marshmallow",
+                  "layer": 2,
+                  "column": 3,
+                  "group": 6
+                },
+                {
+                  "id": "android-phone",
+                  "name": "Android Smart Phone",
+                  "layer": 3,
+                  "column": 2,
+                  "group": 8
+                },
+                {
+                  "id": "android-phone",
+                  "name": "Android Tablet",
+                  "layer": 3,
+                  "column": 2,
+                  "group": 8
+                }
+              ]
+            }
+          ]
+      },
+      {
+        "name": "Signal iOS",
+        "layer": 1,
+        "column": 2,
+        "group": 1,
+        "children": [
+          {
+                "name": "iOS",
+                "layer": 2,
+                "column": 2,
+                "group": 5,
+                "children": [
+                  {
+                    "name": "5.0",
+                    "layer": 2,
+                    "column": 3,
+                    "group": 7
+                  },
+                  {
+                    "name": "6.0",
+                    "layer": 2,
+                    "column": 3,
+                    "group": 7
+                  },
+                  {
+                    "name": "iPhone",
+                    "layer": 3,
+                    "column": 2,
+                    "group": 9,
+                    "children": [
+                      {
+                        "id": "gsm-chip",
+                        "name": "GSM Chip",
+                        "layer": 3,
+                        "column": 3,
+                        "group": 10,
+                        "children": [
+                          {
+                            "id": "gsm-net",
+                            "name": "GSM Network",
+                            "column": 2,
+                            "layer": 4,
+                            "group": 11
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "name": "iPad",
+                    "layer": 3,
+                    "column": 2,
+                    "group": 9
+                  }
+                ]
+              }
+            ]
+      }
+    ]
+  },
+  "nodes" : [
+    {
+      "id": "yo",
+      "name" : "yo",
+      "column": 3,
+      "layer": 4,
+      "group": 11
+    },
+    {
+      "id": "hi",
+      "name" : "hi",
+      "column": 3,
+      "layer": 4,
+      "group": 11
+    }
+  ],
+  "links" : [
+    {
+      "source": "yo",
+      "target": "hi"
+    }
+  ]
+}
