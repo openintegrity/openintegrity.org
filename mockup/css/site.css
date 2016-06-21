@@ -244,6 +244,13 @@ line.link {
  -webkit-column-gap: 1em;
 }
 
+#design .data .row {
+ -moz-column-width: 18em;
+ -webkit-column-width: 18em;
+ -moz-column-gap: 1em;
+ -webkit-column-gap: 1em;
+}
+
 .data .menu-category {
  display: inline-block;
  margin:  0.25rem;
@@ -251,10 +258,10 @@ line.link {
  width:  100%;
 }
 
-.badge.positive {
+.badge.positive, .badge.true  {
 	background-color: #5cb85c;
 }
 
-.badge.negative {
+.badge.negative, .badge.false {
 	background-color: red;
 }
