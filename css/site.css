@@ -367,7 +367,7 @@ blockquote p {
   .has-docked-nav .navbar {
     position: fixed;
     top: 0;
-    left: 2px; }
+    left: 10px; }
   .has-docked-nav .navbar-spacer {
     display: block; }
   /* Re-overiding the width 100% declaration to match size of % based container */
