@@ -1,0 +1,204 @@
+<!DOCTYPE html><html><head><meta charset="utf8"><title> &middot; Open Integrity</title><meta name="description" content=""><meta name="author" content=""><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><link rel="stylesheet" href="/css/bootstrap.min.css"><link rel="stylesheet" href="/css/tether.min.css"><link rel="stylesheet" href="/css/skeleton.css"><link rel="stylesheet" href="/css/site.css"><!--[if lt IE 9]><script src="/js/html5.js"></script><![endif]--><script src="/js/jquery.min.js"></script><script src="/js/tether.min.js"></script><script src="/js/bootstrap.min.js"></script><script src="/js/anchor.min.js"></script><script src="/js/site.js"></script><link rel="shortcut icon" href="/images/favicon.ico"><link rel="apple-touch-icon" href="/images/apple-touch-icon.png"><link rel="apple-touch-icon" sizes="72x72" href="/images/apple-touch-icon-72x72.png"><link rel="apple-touch-icon" sizes="114x114" href="/images/apple-touch-icon-114x114.png"><link rel="stylesheet" type="text/css" href="/css/fonts.css"><link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml"></head><body class="has-docked-nav"><div class="container"><div class="navbar-spacer"></div><nav class="navbar"><div class="container"><button type="button" data-toggle="collapse" data-target="#navbar" class="navbar-toggler hidden-md-up">☰ Menu</button><div id="navbar" class="collapse navbar-toggleable-sm"><ul class="nav navbar-nav"><li class="nav-item"><a href="/" class="nav-link">Home <span class="sr-only">(current)</span></a></li><li class="nav-item dropdown"><a data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">About</a><div class="dropdown-menu"><a href="/about" class="dropdown-item">Overview</a><a href="/about#partners" class="dropdown-item">Partners</a></div></li><li class="nav-item dropdown"><a data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle"> 
+Approach</a><div class="dropdown-menu"><a href="/framework" class="dropdown-item">Overview</a><a href="/impact" class="dropdown-item">Impact</a><a href="/practices" class="dropdown-item">Practices</a><a href="/metrics" class="dropdown-item">Metrics</a><div class="dropdown-divider"></div><a href="#" class="dropdown-item">Scores (soon)</a></div></li><li class="nav-item"><a href="/blog" class="nav-link">Blog</a></li><li class="nav-item"><a href="/contribute" class="nav-link">Contribute</a></li></ul></div></div></nav><div class="row links"><small><div class="crumb u-pull-left"><a href="/">Home</a> / <a href="/architecture/">Architecture</a>  / Roadmap</div><div class="utilities u-pull-right"><a href="https://lab.openintegrity.org/project/architecture/edit/master/roadmap.md">Edit</a> - <a href="https://lab.openintegrity.org/project/architecture/commits/master/roadmap.md">Changes</a> - <a href="https://lab.openintegrity.org/project/architecture/tree/master/roadmap.md">Source</a></div></small></div><div class="docs-section"><div class="space"> </div><p>Open Integrity Index Technology Roadmap</p>
+<p>This document provides an overview of how various aspects of the Open Integrity Index technology components will evolve. The aim is to propose a logical progression from basic capabilities to more advanced ones, based on existing data and partnerships (Libraries.io, TOSDR, Ranking Digital Rights), and supporting the objectives of the Open Integrity Index.</p>
+<p>The overall priorities will progress as follow:</p>
+<ul>
+<li><p><strong>Develop a data model:</strong> starting with documentation, then formalise a schema to enable a decentralised architecture.</p></li>
+<li><p><strong>Collect existing metrics and develop new metrics</strong>: start with basic open source project data, move towards security related data as well as legal and measurable service data.</p></li>
+<li><p><strong>Make data easy to consume</strong>: starting with bulk download, then simple query API and moving toward a federated query API.</p></li>
+</ul>
+<p>These priorities will evolve based on the consultation with data consumer partners. In addition other low hanging fruits will be looked at such as:</p>
+<ul>
+<li><p>Help define a unique identifier for projects</p></li>
+<li><p>Help standardize document update monitoring (TOSBack)</p></li>
+</ul>
+<p>At a later stage more complex querying, collection of data to feed an index cache, data streaming API, tools for validating measurement partner schema adoption. Also see:</p>
+<ul>
+<li><p><a href="https://docs.google.com/document/d/1cB5iNFSlTCvWI8nXO8ICjTo1CTGBi9j2B2jm87iyxtE/edit#">Measurement Partnerships document</a></p></li>
+<li><p><a href="https://docs.google.com/spreadsheets/d/1u856E2ecm_BOGzw_eIE5a5k3zMtP4tIi0QquOGdVvXA/edit#gid=1287282665">Metrics Spreadsheet</a></p></li>
+</ul>
+<p><img src="images/image_0.png" alt="image alt text" /></p>
+<p><img src="images/image_1.png" alt="image alt text" /></p>
+<p><a href="https://docs.google.com/spreadsheets/d/1xS_8CO5zoJ3D8TiKRnyM9RaNtu4silV6nReJpZLuBoc/edit#gid=0" class="uri">https://docs.google.com/spreadsheets/d/1xS_8CO5zoJ3D8TiKRnyM9RaNtu4silV6nReJpZLuBoc/edit#gid=0</a></p>
+<p>See also Agent Roadmap below for possible OII measurement agents that can be reused by measurement partners.</p>
+<h1 id="roadmap">Roadmap</h1>
+<h2 id="metrics-roadmap">Metrics roadmap</h2>
+<p>Measurement Agent or Measurement Partner Agent in -&gt; Metrics out</p>
+<p>OII metrics are metrics which are made available through the Open Integrity Index metrics API. It can be collected through measurement partners or by OII itself. See <a href="https://docs.google.com/spreadsheets/d/1u856E2ecm_BOGzw_eIE5a5k3zMtP4tIi0QquOGdVvXA/edit#gid=1287282665">Metrics spreadsheet</a>. Specifically the** oii-metrics version **column.</p>
+<p>The metrics repo should include the measurement partners' measurement agent's code and include OII's own measurement agents as well as deployment scripts (fabfiles, ansible scripts, dockerfiles,...).</p>
+<p>The following roadmap items correspond to increase of overall coverage of metrics available via the Open Integrity Initiative. Depending on partnership progress and research, different metrics might be developed. For instance,</p>
+<h3 id="oii-metrics-0.1.0">oii-metrics-0.1.0</h3>
+<p>Basic Project metrics.</p>
+<ul>
+<li><p>Project relevance metrics. (For instance, oii-metrics-relevance-google-trends-per-country)</p></li>
+<li><p>Project identification metrics (to help uniquely identify projects)</p></li>
+<li><p>Libraries.io (existing data, using oii-schema-0.1.0)</p></li>
+</ul>
+<p>These metrics will typically be collected by &quot;Download / Parse / Update&quot; Agents which will access a URL, parse it, perform a calculation or transformation, and update a metric repository.</p>
+<h3 id="oii-metrics-0.2.0">oii-metrics-0.2.0</h3>
+<p>Project / Contributors / Owners metrics (Ohloh parity)</p>
+<p>Should allow CII Census to be reproduced from OII data.</p>
+<h3 id="oii-metrics-0.3.0">oii-metrics-0.3.0</h3>
+<p>Claims / Verification : User submitted metrics and claims, verification and dispute resolution workflows associated.</p>
+<p><strong>oii-metrics-claims-</strong>*</p>
+<p>allows collection/scraping of claims for different types of sources. (might be the wikirate platform)</p>
+<p><strong>oii-metrics-verification</strong></p>
+<p>collection/scraping and parsing of verification for metrics and claims (might be a set of wikirate workflow rules).</p>
+<h3 id="oii-metrics-0.4.0">oii-metrics-0.4.0</h3>
+<p>Advanced Project metrics / Services</p>
+<h3 id="oii-metrics-0.5.0">oii-metrics-0.5.0</h3>
+<p>Security Advisories - Allow to reproduce CVEDetails CVSS Score distribution from OII data.</p>
+<h3 id="oii-metrics-0.6.0">oii-metrics-0.6.0</h3>
+<p>Simple Mining . Use simple heuristics and regexp to classify issue/commits/... tags and titles, or match existing project's approaches (like <a href="http://www.cvedetails.com/how-does-it-work.php">cvedetails.com</a> or osvdb.org linking CVEs to projets).</p>
+<h3 id="oii-metrics-0.7.0">oii-metrics-0.7.0</h3>
+<p>Advanced Mining</p>
+<h4 id="agents">Agents</h4>
+<p>Open Integrity might develop Measurement Agent code and operate Agents when it fills a gap and helps downstream data consumers. One example is with regards to monitoring web page changes and keeping track of changes. This type of agent could be reused by TOSBack for monitoring changes to terms of service, as well as Libraries for monitoring README changes or CHANGELOG changes.</p>
+<p>It doesn't make sense to impose a technology stack for Agents, they should however adhere to a particular API format for metric submission which will include a schema.</p>
+<ul>
+<li><p>Measurement partners should be able to add or register a Metric.</p>
+<ul>
+<li><p>It should be either an agreed Metric Type that is described in the master OII Metric Taxonomy, if not the new Metric Type should be submitted to the Consultation group.</p></li>
+<li><p>It should either refer to an existing project (with a unique identifier)</p></li>
+</ul></li>
+</ul>
+<h2 id="repository-roadmap">Repository roadmap</h2>
+<h3 id="oii-repository-0.1.0">oii-repository-0.1.0</h3>
+<p>Flat File Catalog: one json file per project per partner (/data/openssl/librariesio.json) with metric link ( { &quot;oii:name&quot;: &quot;openssl&quot;, &quot;oii:id&quot;: &quot;<a href="https://openintegrity.org/projects/openssl" class="uri">https://openintegrity.org/projects/openssl</a>&quot;, &quot;libio:dependencies&quot;, &quot;<a href="https://libraries.io/openssl/dependencies" class="uri">https://libraries.io/openssl/dependencies</a>&quot;, …} )</p>
+<h2 id="analytics-roadmap">Analytics roadmap</h2>
+<p>Data Storage &amp; Analytics layer.</p>
+<p>Analytics capability will be mainly drawn from partnerships in the future. At this stage, simple capabilities will be provided in order to query the metrics repository and data catalogue.</p>
+<p>Ultimately, how expressive does the API need to be? In particular, should it allow getting large time series or also do some custom querying</p>
+<p>Providing analysis of code will depend on the approach taken. It will require either a batch or a streaming data processing pipeline or a combination of both (&quot;lambda architecture&quot;). It might be most cost efficient and faster to launch to make use of existing cloud computing services such as Big Query, Cloud DataFlow,RedShift or others. Partnerships with existing software repository mining projects might also be pursued (such as with BOA - boa.cs.iastate.edu).</p>
+<p>Data governance requirements (for reproducibility and availability) might require to allow the deployment of data processing systems also on private clouds. In addition, given the requirements for storing data and the network bandwidth required to periodically update metrics, it might be more sustainable to deploy a private cloud and use existing open source orchestration systems combined with big data cluster management software (such as Ambari) to provision, manage and monitor the metrics collection infrastructure. Fortunately, a number of Open Integrity Initiative potential partners (such as Libraries.io, Google, M-Lab) and iilab strategic partners (such as Greenhost, OONI) already manage similar systems. In addition, with increasing visibility and partnerships, it will be possible to follow a similar approach to that of open source operating systems distributions and manage a mirror program.</p>
+<h3 id="oii-analytics-0.1.0">oii-analytics-0.1.0</h3>
+<p>First iteration to uniquely identify projects across metrics sources.</p>
+<h3 id="oii-analytics-0.2.0">oii-analytics-0.2.0</h3>
+<p>Mock API design. Capacity to identify the basic relationships between Project, Contributors, Owner, Services, Dependencies, Platforms across sources.</p>
+<p>API Design tooling</p>
+<ul>
+<li><p><a href="https://mockbin.com/" class="uri">https://mockbin.com/</a></p></li>
+<li><p>Apiary blueprints - (Hypermedia) <a href="https://github.com/resource-blueprint/resource-blueprint" class="uri">https://github.com/resource-blueprint/resource-blueprint</a></p></li>
+<li><p>RAML</p></li>
+<li><p>Swagger (doesn't support Hypermedia or Schema)</p></li>
+</ul>
+<p>Examples of API design for metrics:</p>
+<ul>
+<li><p><a href="https://telemetry.readme.io/docs/metrics" class="uri">https://telemetry.readme.io/docs/metrics</a></p></li>
+<li><p>New Relic <a href="https://docs.newrelic.com/docs/apis/rest-api-v2/api-explorer-v2/retrieving-metric-data-your-app-explorer" class="uri">https://docs.newrelic.com/docs/apis/rest-api-v2/api-explorer-v2/retrieving-metric-data-your-app-explorer</a></p></li>
+</ul>
+<h3 id="oii-analytics-0.3.0">oii-analytics-0.3.0</h3>
+<p>API Proxy and Document DB - Focus on getting early feedback on API design, proxying requests to existing APIs and allowing to download CSV/JSON for simple queries (with project selector query and metrics category selection). <a href="https://openintegrity.org/projects/openssl" class="uri">https://openintegrity.org/projects/openssl</a> serves the above and <a href="https://openintegrity.org/projects/openssl" class="uri">https://openintegrity.org/projects/openssl</a>/dependencies redirects to <a href="https://libraries.io/openssl/dependencies" class="uri">https://libraries.io/openssl/dependencies</a>? Just Index or Document + Index to store ? Document DB? (Mongo/Orient/Couch?) OR CKAN? GHTorrent way (Mongo + SQL)?</p>
+<h3 id="oii-analytics-0.4.0">oii-analytics-0.4.0</h3>
+<p>Reconciliation API, API Proxying and Data Repository. Iterate on API design and setup data repository. Documents + Graph? Mongo + Neo4j/Triple OR OrientDB OR Elastic Search.</p>
+<h4 id="api-proxy">API Proxy</h4>
+<ul>
+<li><p><a href="http://apiumbrella.io/" class="uri">http://apiumbrella.io/</a> (uses Rails, Swagger 2.0)</p></li>
+<li><p><a href="https://tyk.io/" class="uri">https://tyk.io/</a> (uses Go, Swagger and API Blueprint, can write <a href="https://github.com/lonelycode/tyk/blob/master/middleware/sampleMiddleware.js">middleware in Javascript</a>)</p></li>
+<li><p><a href="https://getkong.org/" class="uri">https://getkong.org/</a> (uses Lua, extensible with plugins, seems polished)</p></li>
+<li><p><a href="https://vulcand.io/" class="uri">https://vulcand.io/</a> (uses Go, pretty barebones)</p></li>
+<li><p><a href="http://apiaxle.com/" class="uri">http://apiaxle.com/</a></p></li>
+</ul>
+<h3 id="oii-analytics-0.5.0">oii-analytics-0.5.0</h3>
+<p>Analytics API. Lambda Architecture.</p>
+<p>Potential storage and analytics layer options</p>
+<ul>
+<li><p>Hosted</p>
+<ul>
+<li><p>Big Query</p></li>
+<li><p>Cloud DataFlow</p></li>
+<li><p>RedShift</p></li>
+<li><p>IBM BigR</p></li>
+</ul></li>
+<li><p>Open Source</p>
+<ul>
+<li><p>OpenTSDB - <a href="http://opentsdb.net/" class="uri">http://opentsdb.net/</a></p></li>
+<li><p>Druid</p></li>
+<li><p>Spark</p></li>
+<li><p>Storm</p></li>
+<li><p>Kafka</p></li>
+</ul></li>
+</ul>
+<p>Realtime API? See Google <a href="https://developers.google.com/analytics/devguides/reporting/realtime/v3/reference/data/realtime/get">Analytics Real Time Reporting API</a>. Documents + Triple Store? All as triples? Could still use Mongo as the backend <a href="https://github.com/google/cayley" class="uri">https://github.com/google/cayley</a></p>
+<h3 id="oii-analytics-0.6.0">oii-analytics-0.6.0</h3>
+<p>Federated analytics. Allow the federation of multiple analytics backend offering various capabilities.</p>
+<p>Example of future Analytics Partnerships:</p>
+<ul>
+<li>BOA - Mining Ultra-Large-Scale Software Repositories <a href="http://boa.cs.iastate.edu/" class="uri">http://boa.cs.iastate.edu/</a></li>
+</ul>
+<p>Example of advanced analytics agents:</p>
+<ul>
+<li>Fuzzing: <a href="https://blog.hboeck.de/archives/868-How-Heartbleed-couldve-been-found.html" class="uri">https://blog.hboeck.de/archives/868-How-Heartbleed-couldve-been-found.html</a></li>
+</ul>
+<h2 id="schema-roadmap">Schema roadmap</h2>
+<p>The model should help describe the structure of all the measurements collected, it should also help propose evolution in partner data structures that will help broader interoperability.</p>
+<h3 id="oii-schema-0.1.0">oii-schema-0.1.0</h3>
+<p>Documented and organised list of metrics in a tabular format.</p>
+<h3 id="oii-schema-0.2.0">oii-schema-0.2.0</h3>
+<p>Published schema in JSON Schema for only oii-metrics-0.2.0</p>
+<h3 id="oii-schema-0.3.0">oii-schema-0.3.0</h3>
+<p>Second version of schema in JSON Schema for oii-metrics-0.3.0 / Should include a validator service (validator.openintegrity.org with a URL query box that wil validate if a specific JSON file is valid).</p>
+<ul>
+<li><p>JSON-LD</p></li>
+<li><p>Ontology....</p></li>
+</ul>
+<h2 id="client-roadmap">Client roadmap</h2>
+<p>Build a reference API client and develop API consumption documentation.</p>
+<ul>
+<li><p>oii-client-0.1.0 :</p>
+<ul>
+<li>Get available project metrics API endpoints. i.e. HTTP GET /project/openssl will return the list of available metrics with URI to access them.</li>
+</ul></li>
+<li><p>oii-client-0.2.0 :</p></li>
+<li><p>oii-client-0.3.0 :</p>
+<ul>
+<li>Get list of important OSS project : according to user submitted definition of &quot;important&quot; ?</li>
+</ul></li>
+<li><p>oii-client-0.4.0 :</p>
+<ul>
+<li>Real Time Analytics</li>
+</ul></li>
+</ul>
+<p>Notebook / SQL Interface to Mongo - <a href="http://slamdata.com/" class="uri">http://slamdata.com/</a></p>
+<p>Telemetry - <a href="https://telemetry.readme.io/docs/accessing-series-data-from-asl" class="uri">https://telemetry.readme.io/docs/accessing-series-data-from-asl</a></p>
+<h2 id="systems-roadmap">Systems Roadmap</h2>
+<h3 id="oii-systems-0.1.0">oii-systems-0.1.0</h3>
+<p>Development Systems</p>
+<h3 id="oii-systems-0.2.0">oii-systems-0.2.0</h3>
+<p>Testing and Staging Systems</p>
+<h3 id="oii-systems-0.3.0">oii-systems-0.3.0</h3>
+<p>Production Systems</p>
+<h4 id="storage-bandwidth">Storage &amp; Bandwidth</h4>
+<p>A number of metrics will depend on the existence of historical data, which will increase the storage requirements, as well as depend on frequent pulling of updated data, which will also increase network bandwidth requirements.</p>
+<p>It might be preferable to only store raw project data based on sets of criteria, such as the pre-existence of mirrors or importance indicators (number of depending code bases, audience and usage).</p>
+<p>Such raw data would include code, the content of issue trackers and support forums, as well as web pages (containing documentation, manuals, policies, licenses…).</p>
+<p>The infrastructure will need to support the mirroring of code repositories. There are estimates that there are 50 to 100 billion lines of code in active service and others that estimate up to a trillion. Lammel, R., &amp; Verhoef, C. (2001). <a href="http://www.cs.vu.nl/grammarware/500/500.pdf">Cracking the 500-language problem</a>. Software, IEEE, 18(6), 78-88. This can be roughly estimated to amount to 100 Terabytes. Probably only a small percentage of this code is accessible and therefore storage of all possible code is doable at a reasonable cost.</p>
+<p>Depending on the way the code is accessible (git, svn, cvs,...) there will be an overhead for the repository metadata. It should be possible to optimise the download agents to avoid the download of raw data for large binary blobs (most likely media files).</p>
+<p>The storage and bandwidth necessary for the verification and monitoring of web pages containing textual data (such as terms of service, privacy policies, documentation,...). The tosback-data repository is a dataset of 888+ privacy policies &amp; terms of service and amounts to around 1GB.</p>
+<h1 id="raw-metrics-user-personas">Raw Metrics User Personas</h1>
+<p>In order to help design the Open Integrity metrics repository and API the following preliminary user personas have been developed. During the Inception, Framework, Data and Outreach phase, the personas will be further developed.</p>
+<h2 id="project-owner">Project Owner</h2>
+<ul>
+<li>Developer of a tool wanting to track themselves.</li>
+</ul>
+<h2 id="end-user-advisor-analyst">End-User Advisor / Analyst</h2>
+<ul>
+<li><p>Analyst trying to put together scores to support decision making of end-users or provide downstream calculated data that can be used as advice. i.e. EFF Secure Messaging Scorecard…</p></li>
+<li><p>CII Census,</p></li>
+</ul>
+<h2 id="researcher-analyst">Researcher / Analyst</h2>
+<ul>
+<li><p>Analyst wanting to answer research questions, possibly within an academic setting.</p></li>
+<li><p>Example of research questions:</p>
+<ul>
+<li>&quot;how people perceive and consider the potential impacts of their own and others’ edits as they write together? [Dourish and Bellotti 1992]&quot;; — “what is the most widely used open source license? [Lerner and Tirole 2002]”; “how many projects continue to use DES (considered insecure) encryption standards? [Landau 2000]”; “how many open source projects have a restricted export control policy? [Goodman et al. 1995]”; — “how many projects on an average start with an existing code base from another project instead of scratch? [Raymond 1999]”; — “how often do practitioners use dynamic features of JavaScript, e.g. eval? [Richards et al. 2011]”; and — “what is the average time to resolve a bug reported as critical? [Weiss et al. 2007]”. (<a href="http://www.cs.bgsu.edu/rdyer/papers/tosem15.pdf" class="uri">http://www.cs.bgsu.edu/rdyer/papers/tosem15.pdf</a>)</li>
+</ul></li>
+</ul>
+<h1 id="notes-on-technology-stack">Notes on technology stack</h1>
+<ul>
+<li>Sails.js as an ORM (Waterline) with<a href="https://github.com/balderdashy/waterline#community-adapters">many adapters</a> and is meant for realtime REST apps. Can assign different models to different databases and still allow to make joins.</li>
+</ul>
+</div></div></body><hr><div class="section get-help"><div class="container"><h3 class="section-heading">Want to join the initiative?</h3><p class="section-description">Join us in providing information<br>about software practices.<br>Get in touch to join the initiative !</p><a href="mailto:contact@openintegrity.org" class="button button-primary">Get in touch</a></div></div><div class="section categories"><div class="container"><div class="row"><div class="two columns">&nbsp;</div><div class="eight column category"><h4>Developed with ❤ by</h4><a href="https://iilab.org"><img src="/images/iilab_white.svg" class="u-max-full-width"></a><h5>Information Innovation Lab</h5><p>Applied research and development for public interest technology.</p></div><div class="two columns">&nbsp;</div></div></div></div><script>$( document ).ready(function() {
+  anchors.options.placement = 'left';
+  anchors.add('h1,h2,h3');
+})</script></html>

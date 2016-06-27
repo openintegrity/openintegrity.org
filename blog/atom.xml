@@ -4,7 +4,7 @@
  <title>Open Integrity</title>
  <link href="http://openintegrity.github.io/atom.xml" rel="self"/>
  <link href="http://openintegrity.github.io/"/>
- <updated>Mon, 27 Jun 2016 07:29:41 +0000</updated>
+ <updated>Mon, 27 Jun 2016 08:31:01 +0000</updated>
  <id>http://openintegrity.github.io</id>
  <author>
    <name>Jun Matsushita</name>
@@ -12,29 +12,53 @@
  </author>
 
  <entry>
-   <title>Booting up Open Integrity</title>
-   <link href="http://openintegrity.github.io/blog/2016-03-01-booting-up.md"/>
-   <updated>Tue, 01 Mar 2016 00:00:00 +0000</updated>
+   <title></title>
+   <link href="http://openintegrity.github.io/blog/2016-04-26-participation-workflow.md"/>
+   <updated>Tue, 26 Apr 2016 00:00:00 +0000</updated>
    <id>http://openintegrity.github.io</id>
-   <content type="html">
-If you&#x27;ve been following the Open Integrity Index, you will have noticed that after [our initial efforts in 2013](https://wiki.openintegrity.org/doku.php?id&#x3D;workplan), the project has been on hold. During this first phase, we developed the foundations for [our criteria](https://wiki.openintegrity.org/doku.php?id&#x3D;criteria_subcriteria_claim) and setup [a beta platform](https://openintegrity.org/v1). We now advance with [new funders](../../about#funding-partners) to develop the next step of the project with us.
+   <content type="html"># Call for feedback about our open participation workflow
 
-&lt;!--more--&gt;
+The advent of the web 2.0 has decentralized power, handing it more and more to networked communities. New words such as &quot;crowdsourcing&quot; and &quot;crowdfunding&quot; are now part of the day to day vocabulary. They stand as reminders of the digital empowerment of the crowd, who now can be key actors of long-term projects and ventures.
 
-In this first phase we set the tone of the initiative and the values that we adhere to:
- - **We care about the impact of technology on all users** and particularly those who depend on it to enjoy their fundamental rights.
- - **We take a holistic approach to understanding the impact of technology** which includes the technical features tools make available, but also their usability and the governance and policies of the tool makers.
- - **We believe that security by transparency** is the way to go, yet we know that there are also best practices to follow with closed source software that make a difference for users.
+At OII, we want our project to be as participatory as possible: we seek to ensure that we are part of different practitioner and user communities, and we would like to benefit from a wide range of feedbacks. For everyone to be able to understand how the project incorporates participation, we have structured our very own analytical grid, which explains our [participatory framework platform](http://openi). The methodology we used stems from the MIT academic paper (2009) called [“Hierarchy and Crowd as possible genes&quot;](http://cci.mit.edu/publications/CCIwp2009-01.pdf). It is structured around four questions: Who is participating to OII? Why are they doing it? What are they doing? And how?
 
-**Open Integrity Initiative** has assembled a list of a hundred possible metrics related to various aspects of software development, including governance, systems, architecture, build and user experience. In this [new phase](../../about#funding) we will shift our focus towards the **gathering of measurement and claims** and the **development of a knowledge framework** about the adoption of best practices that support the security and privacy of software.
+In this post, we intend to provide a short summary of our participatory approach (you can read a more detailed version [here](http://openintegrity.github.io/openintegrity.org/framework/workflow/meta/)) by answering these questions. We hope that it will also spark your interest and inspire you to join our ongoing reflection!
 
-Data about the adoption of security and privacy best practices are often difficult to find and rarely easy for users to understand. How can the adoption of these practices be measured, and what is the most useful structure for such a broad range of measurements? How can we answer **reliably and consistently** questions such as:
-- Which tools are **open-source**?
-- Which tools provide **end-to-end encryption**, implement **forward secrecy** or support **two-factor authentication**?
-- Which have security features that are **usable without prior expertise or training**?
-- Which can be **downloaded securely and verified** to be authentic?
+## Who?/Why?
 
-This is what we&#x27;re setting out to answer. In the next 6 months we&#x27;ll focus on [developing partnerships](../../partners#measurement) in order to **define metrics and collect data** that will be available for an audience of professionals (software engineers, trainers, advocacy organizations) and will help provide answers about best practices adoption.
+We believe that the OII is a hybrid project, mixing expertise and crowd efforts. The community of practices constitutes an organising principle but there is no hierarchy _per se_, as anyone can participate (even anonymously).
+
+As far as the motivations of potential OII participants are concerned, we have so far identified a large range of stakeholders (advisory, practice experts, contributors and reviewers, tool developers, advocates and educators, etc.), and we are progressively trying to understand their motivations using the analysis provided by the 2009 MIT paper: Is it Money? Love? Or glory?
+
+## What?/How?
+
+We broke our &quot;What&quot; into two realm of approaches, and described how we will manage to make them happen.
+
+1/ The **framework collaboration** will be a two-fold **decision process**. We will rely alternatively on consensus and individuals to make arbitrations. OII aims at giving a complete  assessment of softwares concerning users’ security and privacy  so we will need consensus to solve software best practices discussions. But as far as the metrics are concerned we will rely on individuals. They will take into account data demand and feedback on metrics quality or performance for instance.
+
+2/ On the other hand, to generate the appropriate metrics, we will use a “traditional” **creation process**. The data collaboration will encompass input of entries and regular updates of content. It will be achieved through data collection as a first step, and progressively the data corpus will grow through peer reviews
+
+# Any thoughts? Any comments? Any questions?
+
+The aim of this thread is to reflect on our participatory framework and start a conversation with you! So feel free to share your take on this (meta) post: we would really like to hear from you! Please send your inputs via email or shout [@openintegrity](http://www.twitter.com/openintegrity) on Twitter.</content>
+ </entry>
+ <entry>
+   <title></title>
+   <link href="http://openintegrity.github.io/blog/2016-04-10-rightscon-practice-workshop.md"/>
+   <updated>Sun, 10 Apr 2016 00:00:00 +0000</updated>
+   <id>http://openintegrity.github.io</id>
+   <content type="html"># &quot;Measuring Security and Privacy Best Practice&quot; workshop at Rightscon Sillicon Valley
+
+On the 1st of April 2016,  the Open Integrity Initiative (OII) team gathered with hundreds of activists and technologists from the Internet and Human Rights sector in San Francisco. Similarly to the workshop at IFF in Valencia[http://openintegrity.github.io/openintegrity.org/blog/internet-freedom-festival/], the participants were invited to join in an ongoing discussion about software&#x27;s security and privacy best practices and share their views on how to better measure them.
+
+As a starting point, the workshop built on the list of hundred of metrics assembled by the OII team over the past two years about software development features such as governance, systems, architecture, build and user experience. We used the OII participative framework [http://openintegrity.github.io/openintegrity.org/framework/workflow/meta/] to guide the development of partnerships and infrastructure to capture metrics about software practices ensuring users&#x27; privacy and security. Following this interactive process, we asked participants to share their own experiences or scenarios concerning these issues.
+
+Through the discussions, the framework allowed us to collect meaningful feedback to understand how specific practices mitigate specific threats in a constantly evolving context. This meeting also gave us the opportunity to collect insights regarding the debates currently at stake in this field of expertise. It is essential for us to encapsulate this information in available metrics to improve the transparency, reproducibility and traceability of the issues and assumptions.
+
+This interactive session benefited from the enthusiastic partipation of the attendees and contributed to successfully flesh out a common ground for our software assesment metrics.
+
+If you would like to send us feedback, or know more about the session at Rightscon Silicon Valley, drop us an email[mailto:contact@openintegrity.org] or a tweet at @openintegrity[https://twitter.com/openintegrity].
+
 </content>
  </entry>
  <entry>
@@ -60,6 +84,32 @@ Some interesting impact stories that emerged were for instance related to the ha
 This brainstorming session benefited from the variety of backgrounds and experience of the participants and helped shaped our thinking around how to link the software assessment metrics to real world and documented impact stories. 
 
 If you would like to know more about the workshop, you can access the IFF presentation. If you want to share your own impact stories related to a tool or software, feel free to drop us an email or tweet at @openintegrity.</content>
+ </entry>
+ <entry>
+   <title>Booting up Open Integrity</title>
+   <link href="http://openintegrity.github.io/blog/2016-03-01-booting-up.md"/>
+   <updated>Tue, 01 Mar 2016 00:00:00 +0000</updated>
+   <id>http://openintegrity.github.io</id>
+   <content type="html">
+If you&#x27;ve been following the Open Integrity Index, you will have noticed that after [our initial efforts in 2013](https://wiki.openintegrity.org/doku.php?id&#x3D;workplan), the project has been on hold. During this first phase, we developed the foundations for [our criteria](https://wiki.openintegrity.org/doku.php?id&#x3D;criteria_subcriteria_claim) and setup [a beta platform](https://openintegrity.org/v1). We now advance with [new funders](../../about#funding-partners) to develop the next step of the project with us.
+
+&lt;!--more--&gt;
+
+In this first phase we set the tone of the initiative and the values that we adhere to:
+ - **We care about the impact of technology on all users** and particularly those who depend on it to enjoy their fundamental rights.
+ - **We take a holistic approach to understanding the impact of technology** which includes the technical features tools make available, but also their usability and the governance and policies of the tool makers.
+ - **We believe that security by transparency** is the way to go, yet we know that there are also best practices to follow with closed source software that make a difference for users.
+
+**Open Integrity Initiative** has assembled a list of a hundred possible metrics related to various aspects of software development, including governance, systems, architecture, build and user experience. In this [new phase](../../about#funding) we will shift our focus towards the **gathering of measurement and claims** and the **development of a knowledge framework** about the adoption of best practices that support the security and privacy of software.
+
+Data about the adoption of security and privacy best practices are often difficult to find and rarely easy for users to understand. How can the adoption of these practices be measured, and what is the most useful structure for such a broad range of measurements? How can we answer **reliably and consistently** questions such as:
+- Which tools are **open-source**?
+- Which tools provide **end-to-end encryption**, implement **forward secrecy** or support **two-factor authentication**?
+- Which have security features that are **usable without prior expertise or training**?
+- Which can be **downloaded securely and verified** to be authentic?
+
+This is what we&#x27;re setting out to answer. In the next 6 months we&#x27;ll focus on [developing partnerships](../../partners#measurement) in order to **define metrics and collect data** that will be available for an audience of professionals (software engineers, trainers, advocacy organizations) and will help provide answers about best practices adoption.
+</content>
  </entry>
 
 </feed>
